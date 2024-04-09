@@ -1,0 +1,2044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UsiminasIpatingaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="checklist">
+          <Key>
+            <PropertyRef Name="id_checklist" />
+          </Key>
+          <Property Name="id_checklist" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_tipo_frete" Type="int" />
+          <Property Name="id_tipo_transporte" Type="int" />
+          <Property Name="placa" Type="varchar" MaxLength="8" />
+          <Property Name="cpf_condutor" Type="varchar" MaxLength="13" />
+          <Property Name="id_emp_transportadora" Type="int" />
+          <Property Name="data_checklist" Type="datetime" />
+          <Property Name="data_fim_checklist" Type="datetime" />
+          <Property Name="tonelada" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="id_usuario" Type="int" />
+          <Property Name="id_tipo_veiculo" Type="int" />
+          <Property Name="id_tipo_carroceria" Type="int" />
+          <Property Name="id_tipo_assoalho" Type="int" />
+          <Property Name="recuperado" Type="bit" />
+          <Property Name="chk_placa2" Type="varchar" MaxLength="8" />
+          <Property Name="chk_placa3" Type="varchar" MaxLength="8" />
+          <Property Name="chk_numeroEntregas" Type="int" />
+          <Property Name="chk_parabrisaTrincado" Type="int" />
+          <Property Name="chk_carroceria" Type="int" />
+          <Property Name="chk_pneusEstepe" Type="int" />
+          <Property Name="chk_luzFreio" Type="int" />
+          <Property Name="chk_setas" Type="int" />
+          <Property Name="chk_estepe" Type="int" />
+          <Property Name="chk_faroisLanterna" Type="int" />
+          <Property Name="chk_assoalho" Type="int" />
+          <Property Name="chk_lona" Type="int" />
+          <Property Name="chk_material" Type="varchar" MaxLength="200" />
+          <Property Name="chk_epi" Type="int" />
+          <Property Name="chk_medidorFumacaNegra" Type="varchar" MaxLength="20" />
+          <Property Name="chk_veicDedicado" Type="int" />
+          <Property Name="chk_cargaDescarga" Type="int" />
+          <Property Name="chk_usinaDeposito" Type="int" />
+          <Property Name="chk_capaceteCarnJugular" Type="int" />
+          <Property Name="chk_oculosSeguranca" Type="int" />
+          <Property Name="chk_protetorAuditivo" Type="int" />
+          <Property Name="chk_perneira" Type="int" />
+          <Property Name="chk_botina" Type="int" />
+          <Property Name="chk_tacografo" Type="int" />
+          <Property Name="chk_carroceriaLimpa" Type="int" />
+          <Property Name="chk_sinalSonoroRe" Type="int" />
+          <Property Name="chk_necesMontarBerco" Type="int" />
+          <Property Name="chk_possui" Type="int" />
+          <Property Name="chk_metalico" Type="int" />
+          <Property Name="chk_bercoProprio" Type="int" />
+          <Property Name="chk_liberado" Type="int" />
+          <Property Name="chk_bobineira" Type="int" />
+          <Property Name="chk_DT" Type="int" />
+          <Property Name="chk_retornouUsina" Type="int" />
+          <Property Name="chk_tipoMaterial" Type="varchar" MaxLength="100" />
+          <Property Name="chk_numLote" Type="varchar" MaxLength="250" />
+          <Property Name="chk_cliente" Type="varchar" MaxLength="200" />
+          <Property Name="chk_observacao" Type="varchar" MaxLength="250" />
+          <Property Name="veiculo_liberado" Type="int" />
+          <Property Name="chk_chassi" Type="int" />
+          <Property Name="chk_extintor" Type="int" />
+          <Property Name="chk_triangMacaco" Type="int" />
+          <Property Name="data_inicio_peacao" Type="datetime" />
+          <Property Name="chk_materialMolhado" Type="int" />
+          <Property Name="chk_materialChovendo" Type="int" />
+          <Property Name="chk_amarracaoCarreta" Type="int" />
+          <Property Name="chk_devidamentePregado" Type="int" />
+          <Property Name="data_fim_peacao" Type="datetime" />
+          <Property Name="chk_cintas" Type="int" />
+          <Property Name="chk_cordasCintasCatracas" Type="int" />
+          <Property Name="chk_alturaVeiculo" Type="int" />
+          <Property Name="chk_situacaoAssoalho" Type="int" />
+          <Property Name="chk_avariaMaterial" Type="int" />
+          <Property Name="chk_tmpGuardaLatTravad" Type="int" />
+          <Property Name="chk_parafusoRodas" Type="int" />
+          <Property Name="chk_trincaTolerancia" Type="int" />
+          <Property Name="chk_dormentesFixados" Type="int" />
+          <Property Name="chk_laudoGanchoAdaptado" Type="int" />
+          <Property Name="chk_todosPinos" Type="int" />
+          <Property Name="chk_dobradicasBoasCondicoes" Type="int" />
+          <Property Name="chk_estruturaTampasFerroMadeira" Type="int" />
+          <Property Name="chk_drenoBobineira" Type="int" />
+          <Property Name="chk_bercoMetalicoBobineira" Type="int" />
+          <Property Name="chk_cargaSecaGraneleiro" Type="int" />
+          <Property Name="chk_catracaoTodaAmarracao" Type="int" />
+          <Property Name="chk_precisouMovimentarTampas" Type="int" />
+          <Property Name="chk_mangote" Type="int" />
+          <Property Name="chk_possuiLaudoOpacidade" Type="int" />
+          <Property Name="data_realizacao_laudoOpacidade" Type="datetime" />
+          <Property Name="chk_retrovisorTrincado" Type="int" />
+          <Property Name="chk_trincaRetrovisorTolerancia" Type="int" />
+          <Property Name="chk_entregaAlavanca" Type="int" />
+          <Property Name="chk_devolucaoAlavanca" Type="int" />
+          <Property Name="chk_bloqueado" Type="int" />
+          <Property Name="chk_tipoAvaria" Type="int" />
+          <Property Name="chk_placaLegivel" Type="int" />
+          <Property Name="chk_estadoGeral" Type="int" />
+          <Property Name="chk_vazamentoOleo" Type="int" />
+          <Property Name="chk_ganchoPatola" Type="int" />
+          <Property Name="chk_tipoLona" Type="int" />
+          <Property Name="chk_qtdeCunha" Type="int" />
+          <Property Name="chk_cintamentoFardos" Type="int" />
+          <Property Name="chk_fotosCondicoesBobineira" Type="int" />
+          <Property Name="chk_drenosDesobstruidos" Type="int" />
+          <Property Name="chk_borrachaBobineiraInterica" Type="int" />
+          <Property Name="chk_borrachaFixaBobineira" Type="int" />
+          <Property Name="chk_condicoesBobineira" Type="int" />
+          <Property Name="chk_travaSegurancaTampas" Type="int" />
+          <Property Name="placa_mercosul" Type="varchar" MaxLength="20" />
+          <Property Name="chk_possui_borrachas_assoalho" Type="int" />
+          <Property Name="chk_condicoes_embalagem_material" Type="int" />
+          <Property Name="chk_borrachas_assoalho_carga" Type="int" />
+        </EntityType>
+        <EntityType Name="checklist_fase">
+          <Key>
+            <PropertyRef Name="id_checklist_fase" />
+          </Key>
+          <Property Name="id_checklist_fase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_checklist" Type="int" Nullable="false" />
+          <Property Name="id_fase" Type="int" Nullable="false" />
+          <Property Name="data_inicio_fase" Type="datetime" />
+          <Property Name="data_final_fase" Type="datetime" />
+          <Property Name="id_usuario" Type="int" />
+        </EntityType>
+        <EntityType Name="cidade">
+          <Key>
+            <PropertyRef Name="id_cidade" />
+          </Key>
+          <Property Name="id_cidade" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_cidade" Type="varchar" MaxLength="50" />
+          <Property Name="id_estado" Type="int" />
+          <Property Name="ibge_estado" Type="int" />
+        </EntityType>
+        <EntityType Name="condutor">
+          <Key>
+            <PropertyRef Name="cpf_condutor" />
+          </Key>
+          <Property Name="cpf_condutor" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="nome_condutor" Type="varchar" MaxLength="100" />
+          <Property Name="cnh" Type="varchar" MaxLength="14" />
+          <Property Name="data_nascimento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="cor_veiculo">
+          <Key>
+            <PropertyRef Name="id_cor_veiculo" />
+          </Key>
+          <Property Name="id_cor_veiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_cor_veiculo" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Name="id_empresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_tipo_empresa" Type="int" />
+          <Property Name="razao_social" Type="varchar" MaxLength="50" />
+          <Property Name="nome_fantasia" Type="varchar" MaxLength="50" />
+          <Property Name="cpfcnpj" Type="varchar" MaxLength="14" />
+          <Property Name="idc_horario_verao" Type="tinyint" />
+          <Property Name="inscricao_estadual" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="ordem" Type="tinyint" />
+          <Property Name="endereco" Type="varchar" MaxLength="100" />
+          <Property Name="bairro" Type="varchar" MaxLength="100" />
+          <Property Name="cep" Type="varchar" MaxLength="8" />
+          <Property Name="telefone" Type="varchar" MaxLength="14" />
+          <Property Name="id_cidade" Type="int" />
+          <Property Name="id_estado" Type="int" />
+          <Property Name="codigo" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="id_endereco" />
+          </Key>
+          <Property Name="id_endereco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_empresa" Type="int" />
+          <Property Name="id_cidade" Type="int" />
+          <Property Name="bairro" Type="varchar" MaxLength="30" />
+          <Property Name="logradrouro" Type="varchar" MaxLength="80" />
+          <Property Name="numero" Type="int" />
+          <Property Name="cep" Type="varchar" MaxLength="10" />
+          <Property Name="telefone" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+          </Key>
+          <Property Name="id_estado" Type="int" Nullable="false" />
+          <Property Name="desc_estado" Type="varchar" MaxLength="100" />
+          <Property Name="sig_estado" Type="varchar" MaxLength="2" />
+          <Property Name="id_pais" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="marca_veiculo">
+          <Key>
+            <PropertyRef Name="id_marca_veiculo" />
+          </Key>
+          <Property Name="id_marca_veiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_marca_veiculo" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id_pais" />
+          </Key>
+          <Property Name="id_pais" Type="int" Nullable="false" />
+          <Property Name="desc_pais" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="permissao_usuario">
+          <Key>
+            <PropertyRef Name="id_permissao_usuario" />
+          </Key>
+          <Property Name="id_permissao_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="id_tela" Type="int" />
+          <Property Name="ativo" Type="bit" />
+        </EntityType>
+        <EntityType Name="tela">
+          <Key>
+            <PropertyRef Name="id_tela" />
+          </Key>
+          <Property Name="id_tela" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tela" Type="varchar" MaxLength="50" />
+          <Property Name="hyperlink_nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tipo_acessorio">
+          <Key>
+            <PropertyRef Name="id_tipo_acessorio" />
+          </Key>
+          <Property Name="id_tipo_acessorio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_acessorio" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_assoalho">
+          <Key>
+            <PropertyRef Name="id_tipo_assoalho" />
+          </Key>
+          <Property Name="id_tipo_assoalho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_assoalho" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tipo_carroceria">
+          <Key>
+            <PropertyRef Name="id_tipo_carroceria" />
+          </Key>
+          <Property Name="id_tipo_carroceria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_carroceria" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_empresa">
+          <Key>
+            <PropertyRef Name="id_tipo_empresa" />
+          </Key>
+          <Property Name="id_tipo_empresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_empresa" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_fase">
+          <Key>
+            <PropertyRef Name="id_fase" />
+          </Key>
+          <Property Name="id_fase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_fase" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_frete">
+          <Key>
+            <PropertyRef Name="id_tipo_frete" />
+          </Key>
+          <Property Name="id_tipo_frete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_frete" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_produto">
+          <Key>
+            <PropertyRef Name="id_tipo_produto" />
+          </Key>
+          <Property Name="id_tipo_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_produto" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_qualidade_item">
+          <Key>
+            <PropertyRef Name="id_tipo_qualidade_item" />
+          </Key>
+          <Property Name="id_tipo_qualidade_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_qualidade_item" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_transporte">
+          <Key>
+            <PropertyRef Name="id_tipo_transporte" />
+          </Key>
+          <Property Name="id_tipo_transporte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_transporte" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_usuario">
+          <Key>
+            <PropertyRef Name="id_tipo_usuario" />
+          </Key>
+          <Property Name="id_tipo_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_usuario" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tipo_veiculo">
+          <Key>
+            <PropertyRef Name="id_tipo_veiculo" />
+          </Key>
+          <Property Name="id_tipo_veiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desc_tipo_veiculo" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_empresa" Type="int" />
+          <Property Name="id_tipo_usuario" Type="int" />
+          <Property Name="nome_usuario" Type="varchar" MaxLength="60" />
+          <Property Name="login" Type="varchar" MaxLength="20" />
+          <Property Name="senha" Type="varchar" MaxLength="100" />
+          <Property Name="usu_administrador" Type="int" />
+          <Property Name="id_transportadora" Type="int" />
+          <Property Name="application_sessionID" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="veiculo">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Name="placa" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="ano" Type="int" />
+          <Property Name="idc_reprovado" Type="tinyint" />
+          <Property Name="modelo" Type="varchar" MaxLength="50" />
+          <Property Name="id_cor_veiculo" Type="int" />
+          <Property Name="id_marca_veiculo" Type="int" />
+          <Property Name="placa_mercosul" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__checklist__id_us__59063A47">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="checklist_fase" Type="Self.checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__checklist__id_us__59FA5E80">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="checklist_fase" Type="Self.checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_check_fase_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_condutor">
+          <End Role="condutor" Type="Self.condutor" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condutor">
+              <PropertyRef Name="cpf_condutor" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="cpf_condutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_fas_tipo_fase">
+          <End Role="tipo_fase" Type="Self.tipo_fase" Multiplicity="1" />
+          <End Role="checklist_fase" Type="Self.checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_fase">
+              <PropertyRef Name="id_fase" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_fase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_fase">
+          <End Role="checklist" Type="Self.checklist" Multiplicity="1" />
+          <End Role="checklist_fase" Type="Self.checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="checklist">
+              <PropertyRef Name="id_checklist" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_checklist" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_assoalho">
+          <End Role="tipo_assoalho" Type="Self.tipo_assoalho" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_assoalho">
+              <PropertyRef Name="id_tipo_assoalho" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_assoalho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_frete">
+          <End Role="tipo_frete" Type="Self.tipo_frete" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_frete">
+              <PropertyRef Name="id_tipo_frete" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_frete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_transpor">
+          <End Role="tipo_transporte" Type="Self.tipo_transporte" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_transporte">
+              <PropertyRef Name="id_tipo_transporte" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_transporte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_veiculo">
+          <End Role="veiculo" Type="Self.veiculo" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="veiculo">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="placa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cidade_estado">
+          <End Role="estado" Type="Self.estado" Multiplicity="0..1" />
+          <End Role="cidade" Type="Self.cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="id_estado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cor_veiculo">
+          <End Role="cor_veiculo" Type="Self.cor_veiculo" Multiplicity="0..1" />
+          <End Role="veiculo" Type="Self.veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor_veiculo">
+              <PropertyRef Name="id_cor_veiculo" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="id_cor_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_cidade">
+          <End Role="cidade" Type="Self.cidade" Multiplicity="0..1" />
+          <End Role="empresa" Type="Self.empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="id_cidade" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_estado">
+          <End Role="estado" Type="Self.estado" Multiplicity="0..1" />
+          <End Role="empresa" Type="Self.empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="id_estado" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_tipo_empresa">
+          <End Role="tipo_empresa" Type="Self.tipo_empresa" Multiplicity="0..1" />
+          <End Role="empresa" Type="Self.empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_empresa">
+              <PropertyRef Name="id_tipo_empresa" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_tipo_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_transportadora">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_emp_transportadora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_endereco_cidade">
+          <End Role="cidade" Type="Self.cidade" Multiplicity="0..1" />
+          <End Role="endereco" Type="Self.endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="id_cidade" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="id_cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_endereco_empresa">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="endereco" Type="Self.endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_marca_veiculo">
+          <End Role="marca_veiculo" Type="Self.marca_veiculo" Multiplicity="0..1" />
+          <End Role="veiculo" Type="Self.veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="marca_veiculo">
+              <PropertyRef Name="id_marca_veiculo" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="id_marca_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_perm_tela">
+          <End Role="tela" Type="Self.tela" Multiplicity="0..1" />
+          <End Role="permissao_usuario" Type="Self.permissao_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tela">
+              <PropertyRef Name="id_tela" />
+            </Principal>
+            <Dependent Role="permissao_usuario">
+              <PropertyRef Name="id_tela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_perm_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="permissao_usuario" Type="Self.permissao_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="permissao_usuario">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_carroceria_checklist">
+          <End Role="tipo_carroceria" Type="Self.tipo_carroceria" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_carroceria">
+              <PropertyRef Name="id_tipo_carroceria" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_carroceria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_qualidade">
+          <End Role="tipo_qualidade_item" Type="Self.tipo_qualidade_item" Multiplicity="1" />
+          <End Role="tipo_qualidade_item1" Type="Self.tipo_qualidade_item" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_qualidade_item">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Principal>
+            <Dependent Role="tipo_qualidade_item1">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_qualidade_conferencia">
+          <End Role="tipo_qualidade_item" Type="Self.tipo_qualidade_item" Multiplicity="1" />
+          <End Role="tipo_qualidade_item1" Type="Self.tipo_qualidade_item" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_qualidade_item">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Principal>
+            <Dependent Role="tipo_qualidade_item1">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_veic_checklist">
+          <End Role="tipo_veiculo" Type="Self.tipo_veiculo" Multiplicity="0..1" />
+          <End Role="checklist" Type="Self.checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_veiculo">
+              <PropertyRef Name="id_tipo_veiculo" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_empresa">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_tipo_usuario">
+          <End Role="tipo_usuario" Type="Self.tipo_usuario" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_usuario">
+              <PropertyRef Name="id_tipo_usuario" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_tipo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_transportadora">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_transportadora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="UsiminasIpatingaModelStoreContainer">
+          <EntitySet Name="checklist" EntityType="Self.checklist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="checklist_fase" EntityType="Self.checklist_fase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cidade" EntityType="Self.cidade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="condutor" EntityType="Self.condutor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cor_veiculo" EntityType="Self.cor_veiculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="endereco" EntityType="Self.endereco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estado" EntityType="Self.estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="marca_veiculo" EntityType="Self.marca_veiculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pais" EntityType="Self.pais" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="permissao_usuario" EntityType="Self.permissao_usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tela" EntityType="Self.tela" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_acessorio" EntityType="Self.tipo_acessorio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_assoalho" EntityType="Self.tipo_assoalho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_carroceria" EntityType="Self.tipo_carroceria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_empresa" EntityType="Self.tipo_empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_fase" EntityType="Self.tipo_fase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_frete" EntityType="Self.tipo_frete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_produto" EntityType="Self.tipo_produto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_qualidade_item" EntityType="Self.tipo_qualidade_item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_transporte" EntityType="Self.tipo_transporte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_usuario" EntityType="Self.tipo_usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_veiculo" EntityType="Self.tipo_veiculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="veiculo" EntityType="Self.veiculo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__checklist__id_us__59063A47" Association="Self.FK__checklist__id_us__59063A47">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="FK__checklist__id_us__59FA5E80" Association="Self.FK__checklist__id_us__59FA5E80">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_check_fase_usuario" Association="Self.fk_check_fase_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_condutor" Association="Self.fk_checklist_condutor">
+            <End Role="condutor" EntitySet="condutor" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_fas_tipo_fase" Association="Self.fk_checklist_fas_tipo_fase">
+            <End Role="tipo_fase" EntitySet="tipo_fase" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_fase" Association="Self.fk_checklist_fase">
+            <End Role="checklist" EntitySet="checklist" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_assoalho" Association="Self.fk_checklist_tipo_assoalho">
+            <End Role="tipo_assoalho" EntitySet="tipo_assoalho" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_frete" Association="Self.fk_checklist_tipo_frete">
+            <End Role="tipo_frete" EntitySet="tipo_frete" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_transpor" Association="Self.fk_checklist_tipo_transpor">
+            <End Role="tipo_transporte" EntitySet="tipo_transporte" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_veiculo" Association="Self.fk_checklist_veiculo">
+            <End Role="veiculo" EntitySet="veiculo" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cidade_estado" Association="Self.fk_cidade_estado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="cidade" EntitySet="cidade" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cor_veiculo" Association="Self.fk_cor_veiculo">
+            <End Role="cor_veiculo" EntitySet="cor_veiculo" />
+            <End Role="veiculo" EntitySet="veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_cidade" Association="Self.fk_empresa_cidade">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_estado" Association="Self.fk_empresa_estado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_tipo_empresa" Association="Self.fk_empresa_tipo_empresa">
+            <End Role="tipo_empresa" EntitySet="tipo_empresa" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_transportadora" Association="Self.fk_empresa_transportadora">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_endereco_cidade" Association="Self.fk_endereco_cidade">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="fk_endereco_empresa" Association="Self.fk_endereco_empresa">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="fk_marca_veiculo" Association="Self.fk_marca_veiculo">
+            <End Role="marca_veiculo" EntitySet="marca_veiculo" />
+            <End Role="veiculo" EntitySet="veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_perm_tela" Association="Self.fk_perm_tela">
+            <End Role="tela" EntitySet="tela" />
+            <End Role="permissao_usuario" EntitySet="permissao_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_perm_usuario" Association="Self.fk_perm_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="permissao_usuario" EntitySet="permissao_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_carroceria_checklist" Association="Self.fk_tipo_carroceria_checklist">
+            <End Role="tipo_carroceria" EntitySet="tipo_carroceria" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_qualidade" Association="Self.fk_tipo_qualidade">
+            <End Role="tipo_qualidade_item" EntitySet="tipo_qualidade_item" />
+            <End Role="tipo_qualidade_item1" EntitySet="tipo_qualidade_item" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_qualidade_conferencia" Association="Self.fk_tipo_qualidade_conferencia">
+            <End Role="tipo_qualidade_item" EntitySet="tipo_qualidade_item" />
+            <End Role="tipo_qualidade_item1" EntitySet="tipo_qualidade_item" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_veic_checklist" Association="Self.fk_tipo_veic_checklist">
+            <End Role="tipo_veiculo" EntitySet="tipo_veiculo" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_empresa" Association="Self.fk_usuario_empresa">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_tipo_usuario" Association="Self.fk_usuario_tipo_usuario">
+            <End Role="tipo_usuario" EntitySet="tipo_usuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_transportadora" Association="Self.fk_usuario_transportadora">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UsiminasIpatingaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="UsiminasIpatingaEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="checklist_fase" EntityType="UsiminasIpatingaModel.checklist_fase" />
+          <EntitySet Name="cidade" EntityType="UsiminasIpatingaModel.cidade" />
+          <EntitySet Name="condutor" EntityType="UsiminasIpatingaModel.condutor" />
+          <EntitySet Name="cor_veiculo" EntityType="UsiminasIpatingaModel.cor_veiculo" />
+          <EntitySet Name="empresa" EntityType="UsiminasIpatingaModel.empresa" />
+          <EntitySet Name="endereco" EntityType="UsiminasIpatingaModel.endereco" />
+          <EntitySet Name="estado" EntityType="UsiminasIpatingaModel.estado" />
+          <EntitySet Name="marca_veiculo" EntityType="UsiminasIpatingaModel.marca_veiculo" />
+          <EntitySet Name="pais" EntityType="UsiminasIpatingaModel.pais" />
+          <EntitySet Name="permissao_usuario" EntityType="UsiminasIpatingaModel.permissao_usuario" />
+          <EntitySet Name="tela" EntityType="UsiminasIpatingaModel.tela" />
+          <EntitySet Name="tipo_acessorio" EntityType="UsiminasIpatingaModel.tipo_acessorio" />
+          <EntitySet Name="tipo_assoalho" EntityType="UsiminasIpatingaModel.tipo_assoalho" />
+          <EntitySet Name="tipo_carroceria" EntityType="UsiminasIpatingaModel.tipo_carroceria" />
+          <EntitySet Name="tipo_empresa" EntityType="UsiminasIpatingaModel.tipo_empresa" />
+          <EntitySet Name="tipo_fase" EntityType="UsiminasIpatingaModel.tipo_fase" />
+          <EntitySet Name="tipo_frete" EntityType="UsiminasIpatingaModel.tipo_frete" />
+          <EntitySet Name="tipo_produto" EntityType="UsiminasIpatingaModel.tipo_produto" />
+          <EntitySet Name="tipo_qualidade_item" EntityType="UsiminasIpatingaModel.tipo_qualidade_item" />
+          <EntitySet Name="tipo_transporte" EntityType="UsiminasIpatingaModel.tipo_transporte" />
+          <EntitySet Name="tipo_usuario" EntityType="UsiminasIpatingaModel.tipo_usuario" />
+          <EntitySet Name="tipo_veiculo" EntityType="UsiminasIpatingaModel.tipo_veiculo" />
+          <EntitySet Name="usuario" EntityType="UsiminasIpatingaModel.usuario" />
+          <EntitySet Name="veiculo" EntityType="UsiminasIpatingaModel.veiculo" />
+          <AssociationSet Name="FK__checklist__id_us__656C112C" Association="UsiminasIpatingaModel.FK__checklist__id_us__656C112C">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="FK__checklist__id_us__66603565" Association="UsiminasIpatingaModel.FK__checklist__id_us__66603565">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_fas_tipo_fase" Association="UsiminasIpatingaModel.fk_checklist_fas_tipo_fase">
+            <End Role="tipo_fase" EntitySet="tipo_fase" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cidade_estado" Association="UsiminasIpatingaModel.fk_cidade_estado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="cidade" EntitySet="cidade" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_cidade" Association="UsiminasIpatingaModel.fk_empresa_cidade">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_endereco_cidade" Association="UsiminasIpatingaModel.fk_endereco_cidade">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cor_veiculo" Association="UsiminasIpatingaModel.fk_cor_veiculo">
+            <End Role="cor_veiculo" EntitySet="cor_veiculo" />
+            <End Role="veiculo" EntitySet="veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_estado" Association="UsiminasIpatingaModel.fk_empresa_estado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_tipo_empresa" Association="UsiminasIpatingaModel.fk_empresa_tipo_empresa">
+            <End Role="tipo_empresa" EntitySet="tipo_empresa" />
+            <End Role="empresa" EntitySet="empresa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_endereco_empresa" Association="UsiminasIpatingaModel.fk_endereco_empresa">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_empresa" Association="UsiminasIpatingaModel.fk_usuario_empresa">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_transportadora" Association="UsiminasIpatingaModel.fk_usuario_transportadora">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_marca_veiculo" Association="UsiminasIpatingaModel.fk_marca_veiculo">
+            <End Role="marca_veiculo" EntitySet="marca_veiculo" />
+            <End Role="veiculo" EntitySet="veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_perm_tela" Association="UsiminasIpatingaModel.fk_perm_tela">
+            <End Role="tela" EntitySet="tela" />
+            <End Role="permissao_usuario" EntitySet="permissao_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_perm_usuario" Association="UsiminasIpatingaModel.fk_perm_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="permissao_usuario" EntitySet="permissao_usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_qualidade" Association="UsiminasIpatingaModel.fk_tipo_qualidade">
+            <End Role="tipo_qualidade_item" EntitySet="tipo_qualidade_item" />
+            <End Role="tipo_qualidade_item1" EntitySet="tipo_qualidade_item" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_qualidade_conferencia" Association="UsiminasIpatingaModel.fk_tipo_qualidade_conferencia">
+            <End Role="tipo_qualidade_item" EntitySet="tipo_qualidade_item" />
+            <End Role="tipo_qualidade_item1" EntitySet="tipo_qualidade_item" />
+          </AssociationSet>
+          <AssociationSet Name="fk_usuario_tipo_usuario" Association="UsiminasIpatingaModel.fk_usuario_tipo_usuario">
+            <End Role="tipo_usuario" EntitySet="tipo_usuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <EntitySet Name="checklist" EntityType="UsiminasIpatingaModel.checklist" />
+          <AssociationSet Name="fk_check_fase_usuario" Association="UsiminasIpatingaModel.fk_check_fase_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_condutor" Association="UsiminasIpatingaModel.fk_checklist_condutor">
+            <End Role="condutor" EntitySet="condutor" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_fase" Association="UsiminasIpatingaModel.fk_checklist_fase">
+            <End Role="checklist" EntitySet="checklist" />
+            <End Role="checklist_fase" EntitySet="checklist_fase" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_assoalho" Association="UsiminasIpatingaModel.fk_checklist_tipo_assoalho">
+            <End Role="tipo_assoalho" EntitySet="tipo_assoalho" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_frete" Association="UsiminasIpatingaModel.fk_checklist_tipo_frete">
+            <End Role="tipo_frete" EntitySet="tipo_frete" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_tipo_transpor" Association="UsiminasIpatingaModel.fk_checklist_tipo_transpor">
+            <End Role="tipo_transporte" EntitySet="tipo_transporte" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_checklist_veiculo" Association="UsiminasIpatingaModel.fk_checklist_veiculo">
+            <End Role="veiculo" EntitySet="veiculo" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_empresa_transportadora" Association="UsiminasIpatingaModel.fk_empresa_transportadora">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_carroceria_checklist" Association="UsiminasIpatingaModel.fk_tipo_carroceria_checklist">
+            <End Role="tipo_carroceria" EntitySet="tipo_carroceria" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_veic_checklist" Association="UsiminasIpatingaModel.fk_tipo_veic_checklist">
+            <End Role="tipo_veiculo" EntitySet="tipo_veiculo" />
+            <End Role="checklist" EntitySet="checklist" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="checklist_fase">
+          <Key>
+            <PropertyRef Name="id_checklist_fase" />
+          </Key>
+          <Property Type="Int32" Name="id_checklist_fase" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_checklist" Nullable="false" />
+          <Property Type="Int32" Name="id_fase" Nullable="false" />
+          <Property Type="DateTime" Name="data_inicio_fase" Precision="3" />
+          <Property Type="DateTime" Name="data_final_fase" Precision="3" />
+          <Property Type="Int32" Name="id_usuario" />
+          <NavigationProperty Name="usuario" Relationship="UsiminasIpatingaModel.FK__checklist__id_us__656C112C" FromRole="checklist_fase" ToRole="usuario" />
+          <NavigationProperty Name="usuario1" Relationship="UsiminasIpatingaModel.FK__checklist__id_us__66603565" FromRole="checklist_fase" ToRole="usuario" />
+          <NavigationProperty Name="tipo_fase" Relationship="UsiminasIpatingaModel.fk_checklist_fas_tipo_fase" FromRole="checklist_fase" ToRole="tipo_fase" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_fase" FromRole="checklist_fase" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="cidade">
+          <Key>
+            <PropertyRef Name="id_cidade" />
+          </Key>
+          <Property Type="Int32" Name="id_cidade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_cidade" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="id_estado" />
+          <Property Type="Int32" Name="ibge_estado" />
+          <NavigationProperty Name="estado" Relationship="UsiminasIpatingaModel.fk_cidade_estado" FromRole="cidade" ToRole="estado" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_empresa_cidade" FromRole="cidade" ToRole="empresa" />
+          <NavigationProperty Name="endereco" Relationship="UsiminasIpatingaModel.fk_endereco_cidade" FromRole="cidade" ToRole="endereco" />
+        </EntityType>
+        <EntityType Name="condutor">
+          <Key>
+            <PropertyRef Name="cpf_condutor" />
+          </Key>
+          <Property Type="String" Name="cpf_condutor" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="nome_condutor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cnh" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="data_nascimento" Precision="3" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_condutor" FromRole="condutor" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="cor_veiculo">
+          <Key>
+            <PropertyRef Name="id_cor_veiculo" />
+          </Key>
+          <Property Type="Int32" Name="id_cor_veiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_cor_veiculo" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="veiculo" Relationship="UsiminasIpatingaModel.fk_cor_veiculo" FromRole="cor_veiculo" ToRole="veiculo" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Type="Int32" Name="id_empresa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_tipo_empresa" />
+          <Property Type="String" Name="razao_social" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="nome_fantasia" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cpfcnpj" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="idc_horario_verao" />
+          <Property Type="String" Name="inscricao_estadual" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="ordem" />
+          <Property Type="String" Name="endereco" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bairro" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cep" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="telefone" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="id_cidade" />
+          <Property Type="Int32" Name="id_estado" />
+          <Property Type="String" Name="codigo" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="cidade" Relationship="UsiminasIpatingaModel.fk_empresa_cidade" FromRole="empresa" ToRole="cidade" />
+          <NavigationProperty Name="estado" Relationship="UsiminasIpatingaModel.fk_empresa_estado" FromRole="empresa" ToRole="estado" />
+          <NavigationProperty Name="tipo_empresa" Relationship="UsiminasIpatingaModel.fk_empresa_tipo_empresa" FromRole="empresa" ToRole="tipo_empresa" />
+          <NavigationProperty Name="endereco1" Relationship="UsiminasIpatingaModel.fk_endereco_empresa" FromRole="empresa" ToRole="endereco" />
+          <NavigationProperty Name="usuario" Relationship="UsiminasIpatingaModel.fk_usuario_empresa" FromRole="empresa" ToRole="usuario" />
+          <NavigationProperty Name="usuario1" Relationship="UsiminasIpatingaModel.fk_usuario_transportadora" FromRole="empresa" ToRole="usuario" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_empresa_transportadora" FromRole="empresa" ToRole="checklist" />
+          </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="id_endereco" />
+          </Key>
+          <Property Type="Int32" Name="id_endereco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_empresa" />
+          <Property Type="Int32" Name="id_cidade" />
+          <Property Type="String" Name="bairro" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="logradrouro" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="numero" />
+          <Property Type="String" Name="cep" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="telefone" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="cidade" Relationship="UsiminasIpatingaModel.fk_endereco_cidade" FromRole="endereco" ToRole="cidade" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_endereco_empresa" FromRole="endereco" ToRole="empresa" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+          </Key>
+          <Property Type="Int32" Name="id_estado" Nullable="false" />
+          <Property Type="String" Name="desc_estado" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="sig_estado" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="id_pais" Nullable="false" />
+          <NavigationProperty Name="cidade" Relationship="UsiminasIpatingaModel.fk_cidade_estado" FromRole="estado" ToRole="cidade" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_empresa_estado" FromRole="estado" ToRole="empresa" />
+        </EntityType>
+        <EntityType Name="marca_veiculo">
+          <Key>
+            <PropertyRef Name="id_marca_veiculo" />
+          </Key>
+          <Property Type="Int32" Name="id_marca_veiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_marca_veiculo" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="veiculo" Relationship="UsiminasIpatingaModel.fk_marca_veiculo" FromRole="marca_veiculo" ToRole="veiculo" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id_pais" />
+          </Key>
+          <Property Type="Int32" Name="id_pais" Nullable="false" />
+          <Property Type="String" Name="desc_pais" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="permissao_usuario">
+          <Key>
+            <PropertyRef Name="id_permissao_usuario" />
+          </Key>
+          <Property Type="Int32" Name="id_permissao_usuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_usuario" Nullable="false" />
+          <Property Type="Int32" Name="id_tela" />
+          <Property Type="Boolean" Name="ativo" />
+          <NavigationProperty Name="tela" Relationship="UsiminasIpatingaModel.fk_perm_tela" FromRole="permissao_usuario" ToRole="tela" />
+          <NavigationProperty Name="usuario" Relationship="UsiminasIpatingaModel.fk_perm_usuario" FromRole="permissao_usuario" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="tela">
+          <Key>
+            <PropertyRef Name="id_tela" />
+          </Key>
+          <Property Type="Int32" Name="id_tela" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tela" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="hyperlink_nome" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="permissao_usuario" Relationship="UsiminasIpatingaModel.fk_perm_tela" FromRole="tela" ToRole="permissao_usuario" />
+        </EntityType>
+        <EntityType Name="tipo_acessorio">
+          <Key>
+            <PropertyRef Name="id_tipo_acessorio" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_acessorio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_acessorio" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tipo_assoalho">
+          <Key>
+            <PropertyRef Name="id_tipo_assoalho" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_assoalho" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_assoalho" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_assoalho" FromRole="tipo_assoalho" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="tipo_carroceria">
+          <Key>
+            <PropertyRef Name="id_tipo_carroceria" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_carroceria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_carroceria" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_tipo_carroceria_checklist" FromRole="tipo_carroceria" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="tipo_empresa">
+          <Key>
+            <PropertyRef Name="id_tipo_empresa" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_empresa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_empresa" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_empresa_tipo_empresa" FromRole="tipo_empresa" ToRole="empresa" />
+        </EntityType>
+        <EntityType Name="tipo_fase">
+          <Key>
+            <PropertyRef Name="id_fase" />
+          </Key>
+          <Property Type="Int32" Name="id_fase" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_fase" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist_fase" Relationship="UsiminasIpatingaModel.fk_checklist_fas_tipo_fase" FromRole="tipo_fase" ToRole="checklist_fase" />
+        </EntityType>
+        <EntityType Name="tipo_frete">
+          <Key>
+            <PropertyRef Name="id_tipo_frete" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_frete" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_frete" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_frete" FromRole="tipo_frete" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="tipo_produto">
+          <Key>
+            <PropertyRef Name="id_tipo_produto" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_produto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_produto" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tipo_qualidade_item">
+          <Key>
+            <PropertyRef Name="id_tipo_qualidade_item" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_qualidade_item" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_qualidade_item" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tipo_qualidade_item1" Relationship="UsiminasIpatingaModel.fk_tipo_qualidade" FromRole="tipo_qualidade_item" ToRole="tipo_qualidade_item1" />
+          <NavigationProperty Name="tipo_qualidade_item2" Relationship="UsiminasIpatingaModel.fk_tipo_qualidade" FromRole="tipo_qualidade_item1" ToRole="tipo_qualidade_item" />
+          <NavigationProperty Name="tipo_qualidade_item11" Relationship="UsiminasIpatingaModel.fk_tipo_qualidade_conferencia" FromRole="tipo_qualidade_item" ToRole="tipo_qualidade_item1" />
+          <NavigationProperty Name="tipo_qualidade_item3" Relationship="UsiminasIpatingaModel.fk_tipo_qualidade_conferencia" FromRole="tipo_qualidade_item1" ToRole="tipo_qualidade_item" />
+        </EntityType>
+        <EntityType Name="tipo_transporte">
+          <Key>
+            <PropertyRef Name="id_tipo_transporte" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_transporte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_transporte" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_transpor" FromRole="tipo_transporte" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="tipo_usuario">
+          <Key>
+            <PropertyRef Name="id_tipo_usuario" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_usuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_usuario" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario" Relationship="UsiminasIpatingaModel.fk_usuario_tipo_usuario" FromRole="tipo_usuario" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="tipo_veiculo">
+          <Key>
+            <PropertyRef Name="id_tipo_veiculo" />
+          </Key>
+          <Property Type="Int32" Name="id_tipo_veiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="desc_tipo_veiculo" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_tipo_veic_checklist" FromRole="tipo_veiculo" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Type="Int32" Name="id_usuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_empresa" />
+          <Property Type="Int32" Name="id_tipo_usuario" />
+          <Property Type="String" Name="nome_usuario" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="login" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="senha" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="usu_administrador" />
+          <Property Type="Int32" Name="id_transportadora" />
+          <Property Type="String" Name="application_sessionID" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="checklist_fase" Relationship="UsiminasIpatingaModel.FK__checklist__id_us__656C112C" FromRole="usuario" ToRole="checklist_fase" />
+          <NavigationProperty Name="checklist_fase1" Relationship="UsiminasIpatingaModel.FK__checklist__id_us__66603565" FromRole="usuario" ToRole="checklist_fase" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_usuario_empresa" FromRole="usuario" ToRole="empresa" />
+          <NavigationProperty Name="empresa1" Relationship="UsiminasIpatingaModel.fk_usuario_transportadora" FromRole="usuario" ToRole="empresa" />
+          <NavigationProperty Name="permissao_usuario" Relationship="UsiminasIpatingaModel.fk_perm_usuario" FromRole="usuario" ToRole="permissao_usuario" />
+          <NavigationProperty Name="tipo_usuario" Relationship="UsiminasIpatingaModel.fk_usuario_tipo_usuario" FromRole="usuario" ToRole="tipo_usuario" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_check_fase_usuario" FromRole="usuario" ToRole="checklist" />
+        </EntityType>
+        <EntityType Name="veiculo">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Type="String" Name="placa" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ano" />
+          <Property Type="Byte" Name="idc_reprovado" />
+          <Property Type="String" Name="modelo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="id_cor_veiculo" />
+          <Property Type="Int32" Name="id_marca_veiculo" />
+          <NavigationProperty Name="cor_veiculo" Relationship="UsiminasIpatingaModel.fk_cor_veiculo" FromRole="veiculo" ToRole="cor_veiculo" />
+          <NavigationProperty Name="marca_veiculo" Relationship="UsiminasIpatingaModel.fk_marca_veiculo" FromRole="veiculo" ToRole="marca_veiculo" />
+          <NavigationProperty Name="checklist" Relationship="UsiminasIpatingaModel.fk_checklist_veiculo" FromRole="veiculo" ToRole="checklist" />
+          <Property Name="placa_mercosul" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__checklist__id_us__656C112C">
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist_fase" Role="checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__checklist__id_us__66603565">
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist_fase" Role="checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_fas_tipo_fase">
+          <End Type="UsiminasIpatingaModel.tipo_fase" Role="tipo_fase" Multiplicity="1" />
+          <End Type="UsiminasIpatingaModel.checklist_fase" Role="checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_fase">
+              <PropertyRef Name="id_fase" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_fase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cidade_estado">
+          <End Type="UsiminasIpatingaModel.estado" Role="estado" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.cidade" Role="cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="id_estado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_cidade">
+          <End Type="UsiminasIpatingaModel.cidade" Role="cidade" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="id_cidade" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_endereco_cidade">
+          <End Type="UsiminasIpatingaModel.cidade" Role="cidade" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.endereco" Role="endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="id_cidade" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="id_cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cor_veiculo">
+          <End Type="UsiminasIpatingaModel.cor_veiculo" Role="cor_veiculo" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.veiculo" Role="veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor_veiculo">
+              <PropertyRef Name="id_cor_veiculo" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="id_cor_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_estado">
+          <End Type="UsiminasIpatingaModel.estado" Role="estado" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="id_estado" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_tipo_empresa">
+          <End Type="UsiminasIpatingaModel.tipo_empresa" Role="tipo_empresa" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_empresa">
+              <PropertyRef Name="id_tipo_empresa" />
+            </Principal>
+            <Dependent Role="empresa">
+              <PropertyRef Name="id_tipo_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_endereco_empresa">
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.endereco" Role="endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_empresa">
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_transportadora">
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_transportadora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_marca_veiculo">
+          <End Type="UsiminasIpatingaModel.marca_veiculo" Role="marca_veiculo" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.veiculo" Role="veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="marca_veiculo">
+              <PropertyRef Name="id_marca_veiculo" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="id_marca_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_perm_tela">
+          <End Type="UsiminasIpatingaModel.tela" Role="tela" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.permissao_usuario" Role="permissao_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tela">
+              <PropertyRef Name="id_tela" />
+            </Principal>
+            <Dependent Role="permissao_usuario">
+              <PropertyRef Name="id_tela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_perm_usuario">
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="1" />
+          <End Type="UsiminasIpatingaModel.permissao_usuario" Role="permissao_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="permissao_usuario">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_qualidade">
+          <End Type="UsiminasIpatingaModel.tipo_qualidade_item" Role="tipo_qualidade_item" Multiplicity="1" />
+          <End Type="UsiminasIpatingaModel.tipo_qualidade_item" Role="tipo_qualidade_item1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_qualidade_item">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Principal>
+            <Dependent Role="tipo_qualidade_item1">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_qualidade_conferencia">
+          <End Type="UsiminasIpatingaModel.tipo_qualidade_item" Role="tipo_qualidade_item" Multiplicity="1" />
+          <End Type="UsiminasIpatingaModel.tipo_qualidade_item" Role="tipo_qualidade_item1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_qualidade_item">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Principal>
+            <Dependent Role="tipo_qualidade_item1">
+              <PropertyRef Name="id_tipo_qualidade_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_usuario_tipo_usuario">
+          <End Type="UsiminasIpatingaModel.tipo_usuario" Role="tipo_usuario" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_usuario">
+              <PropertyRef Name="id_tipo_usuario" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="id_tipo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="checklist">
+          <Key>
+            <PropertyRef Name="id_checklist" />
+          </Key>
+          <Property Name="id_checklist" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_tipo_frete" Type="Int32" />
+          <Property Name="id_tipo_transporte" Type="Int32" />
+          <Property Name="placa" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="cpf_condutor" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="id_emp_transportadora" Type="Int32" />
+          <Property Name="data_checklist" Type="DateTime" Precision="3" />
+          <Property Name="data_fim_checklist" Type="DateTime" Precision="3" />
+          <Property Name="tonelada" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="id_usuario" Type="Int32" />
+          <Property Name="id_tipo_veiculo" Type="Int32" />
+          <Property Name="id_tipo_carroceria" Type="Int32" />
+          <Property Name="id_tipo_assoalho" Type="Int32" />
+          <Property Name="recuperado" Type="Boolean" />
+          <Property Name="chk_placa2" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="chk_placa3" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="chk_numeroEntregas" Type="Int32" />
+          <Property Name="chk_parabrisaTrincado" Type="Int32" />
+          <Property Name="chk_carroceria" Type="Int32" />
+          <Property Name="chk_pneusEstepe" Type="Int32" />
+          <Property Name="chk_luzFreio" Type="Int32" />
+          <Property Name="chk_setas" Type="Int32" />
+          <Property Name="chk_estepe" Type="Int32" />
+          <Property Name="chk_faroisLanterna" Type="Int32" />
+          <Property Name="chk_assoalho" Type="Int32" />
+          <Property Name="chk_lona" Type="Int32" />
+          <Property Name="chk_material" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="chk_epi" Type="Int32" />
+          <Property Name="chk_medidorFumacaNegra" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="chk_veicDedicado" Type="Int32" />
+          <Property Name="chk_cargaDescarga" Type="Int32" />
+          <Property Name="chk_usinaDeposito" Type="Int32" />
+          <Property Name="chk_capaceteCarnJugular" Type="Int32" />
+          <Property Name="chk_oculosSeguranca" Type="Int32" />
+          <Property Name="chk_protetorAuditivo" Type="Int32" />
+          <Property Name="chk_perneira" Type="Int32" />
+          <Property Name="chk_botina" Type="Int32" />
+          <Property Name="chk_tacografo" Type="Int32" />
+          <Property Name="chk_carroceriaLimpa" Type="Int32" />
+          <Property Name="chk_sinalSonoroRe" Type="Int32" />
+          <Property Name="chk_necesMontarBerco" Type="Int32" />
+          <Property Name="chk_possui" Type="Int32" />
+          <Property Name="chk_metalico" Type="Int32" />
+          <Property Name="chk_bercoProprio" Type="Int32" />
+          <Property Name="chk_liberado" Type="Int32" />
+          <Property Name="chk_bobineira" Type="Int32" />
+          <Property Name="chk_DT" Type="Int32" />
+          <Property Name="chk_retornouUsina" Type="Int32" />
+          <Property Name="chk_tipoMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="chk_numLote" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="chk_cliente" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="chk_observacao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="veiculo_liberado" Type="Int32" />
+          <Property Name="chk_chassi" Type="Int32" />
+          <Property Name="chk_extintor" Type="Int32" />
+          <Property Name="chk_triangMacaco" Type="Int32" />
+          <Property Name="data_inicio_peacao" Type="DateTime" Precision="3" />
+          <Property Name="chk_materialMolhado" Type="Int32" />
+          <Property Name="chk_materialChovendo" Type="Int32" />
+          <Property Name="chk_amarracaoCarreta" Type="Int32" />
+          <Property Name="chk_devidamentePregado" Type="Int32" />
+          <Property Name="data_fim_peacao" Type="DateTime" Precision="3" />
+          <Property Name="chk_cintas" Type="Int32" />
+          <Property Name="chk_cordasCintasCatracas" Type="Int32" />
+          <Property Name="chk_alturaVeiculo" Type="Int32" />
+          <Property Name="chk_situacaoAssoalho" Type="Int32" />
+          <Property Name="chk_avariaMaterial" Type="Int32" />
+          <Property Name="chk_tmpGuardaLatTravad" Type="Int32" />
+          <Property Name="chk_parafusoRodas" Type="Int32" />
+          <Property Name="chk_trincaTolerancia" Type="Int32" />
+          <Property Name="chk_dormentesFixados" Type="Int32" />
+          <Property Name="chk_laudoGanchoAdaptado" Type="Int32" />
+          <Property Name="chk_todosPinos" Type="Int32" />
+          <Property Name="chk_dobradicasBoasCondicoes" Type="Int32" />
+          <Property Name="chk_estruturaTampasFerroMadeira" Type="Int32" />
+          <Property Name="chk_drenoBobineira" Type="Int32" />
+          <Property Name="chk_bercoMetalicoBobineira" Type="Int32" />
+          <Property Name="chk_cargaSecaGraneleiro" Type="Int32" />
+          <Property Name="chk_catracaoTodaAmarracao" Type="Int32" />
+          <Property Name="chk_precisouMovimentarTampas" Type="Int32" />
+          <Property Name="chk_mangote" Type="Int32" />
+          <Property Name="chk_possuiLaudoOpacidade" Type="Int32" />
+          <Property Name="data_realizacao_laudoOpacidade" Type="DateTime" Precision="3" />
+          <Property Name="chk_retrovisorTrincado" Type="Int32" />
+          <Property Name="chk_trincaRetrovisorTolerancia" Type="Int32" />
+          <Property Name="chk_entregaAlavanca" Type="Int32" />
+          <Property Name="chk_devolucaoAlavanca" Type="Int32" />
+          <Property Name="chk_bloqueado" Type="Int32" />
+          <Property Name="chk_tipoAvaria" Type="Int32" />
+          <Property Name="chk_placaLegivel" Type="Int32" />
+          <Property Name="chk_estadoGeral" Type="Int32" />
+          <Property Name="chk_vazamentoOleo" Type="Int32" />
+          <Property Name="chk_ganchoPatola" Type="Int32" />
+          <Property Name="chk_tipoLona" Type="Int32" />
+          <Property Name="chk_qtdeCunha" Type="Int32" />
+          <Property Name="chk_cintamentoFardos" Type="Int32" />
+          <Property Name="chk_fotosCondicoesBobineira" Type="Int32" />
+          <Property Name="chk_drenosDesobstruidos" Type="Int32" />
+          <Property Name="chk_borrachaBobineiraInterica" Type="Int32" />
+          <Property Name="chk_borrachaFixaBobineira" Type="Int32" />
+          <Property Name="chk_condicoesBobineira" Type="Int32" />
+          <Property Name="chk_travaSegurancaTampas" Type="Int32" />
+          <NavigationProperty Name="usuario" Relationship="UsiminasIpatingaModel.fk_check_fase_usuario" FromRole="checklist" ToRole="usuario" />
+          <NavigationProperty Name="condutor" Relationship="UsiminasIpatingaModel.fk_checklist_condutor" FromRole="checklist" ToRole="condutor" />
+          <NavigationProperty Name="checklist_fase" Relationship="UsiminasIpatingaModel.fk_checklist_fase" FromRole="checklist" ToRole="checklist_fase" />
+          <NavigationProperty Name="tipo_assoalho" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_assoalho" FromRole="checklist" ToRole="tipo_assoalho" />
+          <NavigationProperty Name="tipo_frete" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_frete" FromRole="checklist" ToRole="tipo_frete" />
+          <NavigationProperty Name="tipo_transporte" Relationship="UsiminasIpatingaModel.fk_checklist_tipo_transpor" FromRole="checklist" ToRole="tipo_transporte" />
+          <NavigationProperty Name="veiculo" Relationship="UsiminasIpatingaModel.fk_checklist_veiculo" FromRole="checklist" ToRole="veiculo" />
+          <NavigationProperty Name="empresa" Relationship="UsiminasIpatingaModel.fk_empresa_transportadora" FromRole="checklist" ToRole="empresa" />
+          <NavigationProperty Name="tipo_carroceria" Relationship="UsiminasIpatingaModel.fk_tipo_carroceria_checklist" FromRole="checklist" ToRole="tipo_carroceria" />
+          <NavigationProperty Name="tipo_veiculo" Relationship="UsiminasIpatingaModel.fk_tipo_veic_checklist" FromRole="checklist" ToRole="tipo_veiculo" />
+          <Property Name="placa_mercosul" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="chk_possui_borrachas_assoalho" Type="Int32" />
+          <Property Name="chk_condicoes_embalagem_material" Type="Int32" />
+          <Property Name="chk_borrachas_assoalho_carga" Type="Int32" />
+        </EntityType>
+        <Association Name="fk_check_fase_usuario">
+          <End Type="UsiminasIpatingaModel.usuario" Role="usuario" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_condutor">
+          <End Type="UsiminasIpatingaModel.condutor" Role="condutor" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condutor">
+              <PropertyRef Name="cpf_condutor" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="cpf_condutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_fase">
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="1" />
+          <End Type="UsiminasIpatingaModel.checklist_fase" Role="checklist_fase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="checklist">
+              <PropertyRef Name="id_checklist" />
+            </Principal>
+            <Dependent Role="checklist_fase">
+              <PropertyRef Name="id_checklist" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_assoalho">
+          <End Type="UsiminasIpatingaModel.tipo_assoalho" Role="tipo_assoalho" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_assoalho">
+              <PropertyRef Name="id_tipo_assoalho" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_assoalho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_frete">
+          <End Type="UsiminasIpatingaModel.tipo_frete" Role="tipo_frete" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_frete">
+              <PropertyRef Name="id_tipo_frete" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_frete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_tipo_transpor">
+          <End Type="UsiminasIpatingaModel.tipo_transporte" Role="tipo_transporte" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_transporte">
+              <PropertyRef Name="id_tipo_transporte" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_transporte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_checklist_veiculo">
+          <End Type="UsiminasIpatingaModel.veiculo" Role="veiculo" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="veiculo">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="placa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_empresa_transportadora">
+          <End Type="UsiminasIpatingaModel.empresa" Role="empresa" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_emp_transportadora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_carroceria_checklist">
+          <End Type="UsiminasIpatingaModel.tipo_carroceria" Role="tipo_carroceria" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_carroceria">
+              <PropertyRef Name="id_tipo_carroceria" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_carroceria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_veic_checklist">
+          <End Type="UsiminasIpatingaModel.tipo_veiculo" Role="tipo_veiculo" Multiplicity="0..1" />
+          <End Type="UsiminasIpatingaModel.checklist" Role="checklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_veiculo">
+              <PropertyRef Name="id_tipo_veiculo" />
+            </Principal>
+            <Dependent Role="checklist">
+              <PropertyRef Name="id_tipo_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UsiminasIpatingaModelStoreContainer" CdmEntityContainer="UsiminasIpatingaEntities">
+          <EntitySetMapping Name="checklist_fase">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.checklist_fase">
+              <MappingFragment StoreEntitySet="checklist_fase">
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="data_final_fase" ColumnName="data_final_fase" />
+                <ScalarProperty Name="data_inicio_fase" ColumnName="data_inicio_fase" />
+                <ScalarProperty Name="id_fase" ColumnName="id_fase" />
+                <ScalarProperty Name="id_checklist" ColumnName="id_checklist" />
+                <ScalarProperty Name="id_checklist_fase" ColumnName="id_checklist_fase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cidade">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.cidade">
+              <MappingFragment StoreEntitySet="cidade">
+                <ScalarProperty Name="ibge_estado" ColumnName="ibge_estado" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+                <ScalarProperty Name="desc_cidade" ColumnName="desc_cidade" />
+                <ScalarProperty Name="id_cidade" ColumnName="id_cidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="condutor">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.condutor">
+              <MappingFragment StoreEntitySet="condutor">
+                <ScalarProperty Name="data_nascimento" ColumnName="data_nascimento" />
+                <ScalarProperty Name="cnh" ColumnName="cnh" />
+                <ScalarProperty Name="nome_condutor" ColumnName="nome_condutor" />
+                <ScalarProperty Name="cpf_condutor" ColumnName="cpf_condutor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cor_veiculo">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.cor_veiculo">
+              <MappingFragment StoreEntitySet="cor_veiculo">
+                <ScalarProperty Name="desc_cor_veiculo" ColumnName="desc_cor_veiculo" />
+                <ScalarProperty Name="id_cor_veiculo" ColumnName="id_cor_veiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empresa">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.empresa">
+              <MappingFragment StoreEntitySet="empresa">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+                <ScalarProperty Name="id_cidade" ColumnName="id_cidade" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="ordem" ColumnName="ordem" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="inscricao_estadual" ColumnName="inscricao_estadual" />
+                <ScalarProperty Name="idc_horario_verao" ColumnName="idc_horario_verao" />
+                <ScalarProperty Name="cpfcnpj" ColumnName="cpfcnpj" />
+                <ScalarProperty Name="nome_fantasia" ColumnName="nome_fantasia" />
+                <ScalarProperty Name="razao_social" ColumnName="razao_social" />
+                <ScalarProperty Name="id_tipo_empresa" ColumnName="id_tipo_empresa" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="endereco">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.endereco">
+              <MappingFragment StoreEntitySet="endereco">
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="logradrouro" ColumnName="logradrouro" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="id_cidade" ColumnName="id_cidade" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="id_endereco" ColumnName="id_endereco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estado">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.estado">
+              <MappingFragment StoreEntitySet="estado">
+                <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+                <ScalarProperty Name="sig_estado" ColumnName="sig_estado" />
+                <ScalarProperty Name="desc_estado" ColumnName="desc_estado" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="marca_veiculo">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.marca_veiculo">
+              <MappingFragment StoreEntitySet="marca_veiculo">
+                <ScalarProperty Name="desc_marca_veiculo" ColumnName="desc_marca_veiculo" />
+                <ScalarProperty Name="id_marca_veiculo" ColumnName="id_marca_veiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pais">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.pais">
+              <MappingFragment StoreEntitySet="pais">
+                <ScalarProperty Name="desc_pais" ColumnName="desc_pais" />
+                <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissao_usuario">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.permissao_usuario">
+              <MappingFragment StoreEntitySet="permissao_usuario">
+                <ScalarProperty Name="ativo" ColumnName="ativo" />
+                <ScalarProperty Name="id_tela" ColumnName="id_tela" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="id_permissao_usuario" ColumnName="id_permissao_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tela">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tela">
+              <MappingFragment StoreEntitySet="tela">
+                <ScalarProperty Name="hyperlink_nome" ColumnName="hyperlink_nome" />
+                <ScalarProperty Name="desc_tela" ColumnName="desc_tela" />
+                <ScalarProperty Name="id_tela" ColumnName="id_tela" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_acessorio">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_acessorio">
+              <MappingFragment StoreEntitySet="tipo_acessorio">
+                <ScalarProperty Name="desc_tipo_acessorio" ColumnName="desc_tipo_acessorio" />
+                <ScalarProperty Name="id_tipo_acessorio" ColumnName="id_tipo_acessorio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_assoalho">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_assoalho">
+              <MappingFragment StoreEntitySet="tipo_assoalho">
+                <ScalarProperty Name="desc_tipo_assoalho" ColumnName="desc_tipo_assoalho" />
+                <ScalarProperty Name="id_tipo_assoalho" ColumnName="id_tipo_assoalho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_carroceria">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_carroceria">
+              <MappingFragment StoreEntitySet="tipo_carroceria">
+                <ScalarProperty Name="desc_tipo_carroceria" ColumnName="desc_tipo_carroceria" />
+                <ScalarProperty Name="id_tipo_carroceria" ColumnName="id_tipo_carroceria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_empresa">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_empresa">
+              <MappingFragment StoreEntitySet="tipo_empresa">
+                <ScalarProperty Name="desc_tipo_empresa" ColumnName="desc_tipo_empresa" />
+                <ScalarProperty Name="id_tipo_empresa" ColumnName="id_tipo_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_fase">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_fase">
+              <MappingFragment StoreEntitySet="tipo_fase">
+                <ScalarProperty Name="desc_fase" ColumnName="desc_fase" />
+                <ScalarProperty Name="id_fase" ColumnName="id_fase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_frete">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_frete">
+              <MappingFragment StoreEntitySet="tipo_frete">
+                <ScalarProperty Name="desc_tipo_frete" ColumnName="desc_tipo_frete" />
+                <ScalarProperty Name="id_tipo_frete" ColumnName="id_tipo_frete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_produto">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_produto">
+              <MappingFragment StoreEntitySet="tipo_produto">
+                <ScalarProperty Name="desc_tipo_produto" ColumnName="desc_tipo_produto" />
+                <ScalarProperty Name="id_tipo_produto" ColumnName="id_tipo_produto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_qualidade_item">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_qualidade_item">
+              <MappingFragment StoreEntitySet="tipo_qualidade_item">
+                <ScalarProperty Name="desc_qualidade_item" ColumnName="desc_qualidade_item" />
+                <ScalarProperty Name="id_tipo_qualidade_item" ColumnName="id_tipo_qualidade_item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_transporte">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_transporte">
+              <MappingFragment StoreEntitySet="tipo_transporte">
+                <ScalarProperty Name="desc_tipo_transporte" ColumnName="desc_tipo_transporte" />
+                <ScalarProperty Name="id_tipo_transporte" ColumnName="id_tipo_transporte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_usuario">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_usuario">
+              <MappingFragment StoreEntitySet="tipo_usuario">
+                <ScalarProperty Name="desc_tipo_usuario" ColumnName="desc_tipo_usuario" />
+                <ScalarProperty Name="id_tipo_usuario" ColumnName="id_tipo_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_veiculo">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.tipo_veiculo">
+              <MappingFragment StoreEntitySet="tipo_veiculo">
+                <ScalarProperty Name="desc_tipo_veiculo" ColumnName="desc_tipo_veiculo" />
+                <ScalarProperty Name="id_tipo_veiculo" ColumnName="id_tipo_veiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="application_sessionID" ColumnName="application_sessionID" />
+                <ScalarProperty Name="id_transportadora" ColumnName="id_transportadora" />
+                <ScalarProperty Name="usu_administrador" ColumnName="usu_administrador" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="nome_usuario" ColumnName="nome_usuario" />
+                <ScalarProperty Name="id_tipo_usuario" ColumnName="id_tipo_usuario" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="veiculo">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.veiculo">
+              <MappingFragment StoreEntitySet="veiculo">
+                <ScalarProperty Name="placa_mercosul" ColumnName="placa_mercosul" />
+                <ScalarProperty Name="id_marca_veiculo" ColumnName="id_marca_veiculo" />
+                <ScalarProperty Name="id_cor_veiculo" ColumnName="id_cor_veiculo" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="idc_reprovado" ColumnName="idc_reprovado" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="checklist">
+            <EntityTypeMapping TypeName="UsiminasIpatingaModel.checklist">
+              <MappingFragment StoreEntitySet="checklist">
+                <ScalarProperty Name="chk_borrachas_assoalho_carga" ColumnName="chk_borrachas_assoalho_carga" />
+                <ScalarProperty Name="chk_condicoes_embalagem_material" ColumnName="chk_condicoes_embalagem_material" />
+                <ScalarProperty Name="chk_possui_borrachas_assoalho" ColumnName="chk_possui_borrachas_assoalho" />
+                <ScalarProperty Name="placa_mercosul" ColumnName="placa_mercosul" />
+                <ScalarProperty Name="chk_travaSegurancaTampas" ColumnName="chk_travaSegurancaTampas" />
+                <ScalarProperty Name="chk_condicoesBobineira" ColumnName="chk_condicoesBobineira" />
+                <ScalarProperty Name="chk_borrachaFixaBobineira" ColumnName="chk_borrachaFixaBobineira" />
+                <ScalarProperty Name="chk_borrachaBobineiraInterica" ColumnName="chk_borrachaBobineiraInterica" />
+                <ScalarProperty Name="chk_drenosDesobstruidos" ColumnName="chk_drenosDesobstruidos" />
+                <ScalarProperty Name="chk_fotosCondicoesBobineira" ColumnName="chk_fotosCondicoesBobineira" />
+                <ScalarProperty Name="chk_cintamentoFardos" ColumnName="chk_cintamentoFardos" />
+                <ScalarProperty Name="chk_qtdeCunha" ColumnName="chk_qtdeCunha" />
+                <ScalarProperty Name="chk_tipoLona" ColumnName="chk_tipoLona" />
+                <ScalarProperty Name="chk_ganchoPatola" ColumnName="chk_ganchoPatola" />
+                <ScalarProperty Name="chk_vazamentoOleo" ColumnName="chk_vazamentoOleo" />
+                <ScalarProperty Name="chk_estadoGeral" ColumnName="chk_estadoGeral" />
+                <ScalarProperty Name="chk_placaLegivel" ColumnName="chk_placaLegivel" />
+                <ScalarProperty Name="chk_tipoAvaria" ColumnName="chk_tipoAvaria" />
+                <ScalarProperty Name="chk_bloqueado" ColumnName="chk_bloqueado" />
+                <ScalarProperty Name="chk_devolucaoAlavanca" ColumnName="chk_devolucaoAlavanca" />
+                <ScalarProperty Name="chk_entregaAlavanca" ColumnName="chk_entregaAlavanca" />
+                <ScalarProperty Name="chk_trincaRetrovisorTolerancia" ColumnName="chk_trincaRetrovisorTolerancia" />
+                <ScalarProperty Name="chk_retrovisorTrincado" ColumnName="chk_retrovisorTrincado" />
+                <ScalarProperty Name="data_realizacao_laudoOpacidade" ColumnName="data_realizacao_laudoOpacidade" />
+                <ScalarProperty Name="chk_possuiLaudoOpacidade" ColumnName="chk_possuiLaudoOpacidade" />
+                <ScalarProperty Name="chk_mangote" ColumnName="chk_mangote" />
+                <ScalarProperty Name="chk_precisouMovimentarTampas" ColumnName="chk_precisouMovimentarTampas" />
+                <ScalarProperty Name="chk_catracaoTodaAmarracao" ColumnName="chk_catracaoTodaAmarracao" />
+                <ScalarProperty Name="chk_cargaSecaGraneleiro" ColumnName="chk_cargaSecaGraneleiro" />
+                <ScalarProperty Name="chk_bercoMetalicoBobineira" ColumnName="chk_bercoMetalicoBobineira" />
+                <ScalarProperty Name="chk_drenoBobineira" ColumnName="chk_drenoBobineira" />
+                <ScalarProperty Name="chk_estruturaTampasFerroMadeira" ColumnName="chk_estruturaTampasFerroMadeira" />
+                <ScalarProperty Name="chk_dobradicasBoasCondicoes" ColumnName="chk_dobradicasBoasCondicoes" />
+                <ScalarProperty Name="chk_todosPinos" ColumnName="chk_todosPinos" />
+                <ScalarProperty Name="chk_laudoGanchoAdaptado" ColumnName="chk_laudoGanchoAdaptado" />
+                <ScalarProperty Name="chk_dormentesFixados" ColumnName="chk_dormentesFixados" />
+                <ScalarProperty Name="chk_trincaTolerancia" ColumnName="chk_trincaTolerancia" />
+                <ScalarProperty Name="chk_parafusoRodas" ColumnName="chk_parafusoRodas" />
+                <ScalarProperty Name="chk_tmpGuardaLatTravad" ColumnName="chk_tmpGuardaLatTravad" />
+                <ScalarProperty Name="chk_avariaMaterial" ColumnName="chk_avariaMaterial" />
+                <ScalarProperty Name="chk_situacaoAssoalho" ColumnName="chk_situacaoAssoalho" />
+                <ScalarProperty Name="chk_alturaVeiculo" ColumnName="chk_alturaVeiculo" />
+                <ScalarProperty Name="chk_cordasCintasCatracas" ColumnName="chk_cordasCintasCatracas" />
+                <ScalarProperty Name="chk_cintas" ColumnName="chk_cintas" />
+                <ScalarProperty Name="data_fim_peacao" ColumnName="data_fim_peacao" />
+                <ScalarProperty Name="chk_devidamentePregado" ColumnName="chk_devidamentePregado" />
+                <ScalarProperty Name="chk_amarracaoCarreta" ColumnName="chk_amarracaoCarreta" />
+                <ScalarProperty Name="chk_materialChovendo" ColumnName="chk_materialChovendo" />
+                <ScalarProperty Name="chk_materialMolhado" ColumnName="chk_materialMolhado" />
+                <ScalarProperty Name="data_inicio_peacao" ColumnName="data_inicio_peacao" />
+                <ScalarProperty Name="chk_triangMacaco" ColumnName="chk_triangMacaco" />
+                <ScalarProperty Name="chk_extintor" ColumnName="chk_extintor" />
+                <ScalarProperty Name="chk_chassi" ColumnName="chk_chassi" />
+                <ScalarProperty Name="veiculo_liberado" ColumnName="veiculo_liberado" />
+                <ScalarProperty Name="chk_observacao" ColumnName="chk_observacao" />
+                <ScalarProperty Name="chk_cliente" ColumnName="chk_cliente" />
+                <ScalarProperty Name="chk_numLote" ColumnName="chk_numLote" />
+                <ScalarProperty Name="chk_tipoMaterial" ColumnName="chk_tipoMaterial" />
+                <ScalarProperty Name="chk_retornouUsina" ColumnName="chk_retornouUsina" />
+                <ScalarProperty Name="chk_DT" ColumnName="chk_DT" />
+                <ScalarProperty Name="chk_bobineira" ColumnName="chk_bobineira" />
+                <ScalarProperty Name="chk_liberado" ColumnName="chk_liberado" />
+                <ScalarProperty Name="chk_bercoProprio" ColumnName="chk_bercoProprio" />
+                <ScalarProperty Name="chk_metalico" ColumnName="chk_metalico" />
+                <ScalarProperty Name="chk_possui" ColumnName="chk_possui" />
+                <ScalarProperty Name="chk_necesMontarBerco" ColumnName="chk_necesMontarBerco" />
+                <ScalarProperty Name="chk_sinalSonoroRe" ColumnName="chk_sinalSonoroRe" />
+                <ScalarProperty Name="chk_carroceriaLimpa" ColumnName="chk_carroceriaLimpa" />
+                <ScalarProperty Name="chk_tacografo" ColumnName="chk_tacografo" />
+                <ScalarProperty Name="chk_botina" ColumnName="chk_botina" />
+                <ScalarProperty Name="chk_perneira" ColumnName="chk_perneira" />
+                <ScalarProperty Name="chk_protetorAuditivo" ColumnName="chk_protetorAuditivo" />
+                <ScalarProperty Name="chk_oculosSeguranca" ColumnName="chk_oculosSeguranca" />
+                <ScalarProperty Name="chk_capaceteCarnJugular" ColumnName="chk_capaceteCarnJugular" />
+                <ScalarProperty Name="chk_usinaDeposito" ColumnName="chk_usinaDeposito" />
+                <ScalarProperty Name="chk_cargaDescarga" ColumnName="chk_cargaDescarga" />
+                <ScalarProperty Name="chk_veicDedicado" ColumnName="chk_veicDedicado" />
+                <ScalarProperty Name="chk_medidorFumacaNegra" ColumnName="chk_medidorFumacaNegra" />
+                <ScalarProperty Name="chk_epi" ColumnName="chk_epi" />
+                <ScalarProperty Name="chk_material" ColumnName="chk_material" />
+                <ScalarProperty Name="chk_lona" ColumnName="chk_lona" />
+                <ScalarProperty Name="chk_assoalho" ColumnName="chk_assoalho" />
+                <ScalarProperty Name="chk_faroisLanterna" ColumnName="chk_faroisLanterna" />
+                <ScalarProperty Name="chk_estepe" ColumnName="chk_estepe" />
+                <ScalarProperty Name="chk_setas" ColumnName="chk_setas" />
+                <ScalarProperty Name="chk_luzFreio" ColumnName="chk_luzFreio" />
+                <ScalarProperty Name="chk_pneusEstepe" ColumnName="chk_pneusEstepe" />
+                <ScalarProperty Name="chk_carroceria" ColumnName="chk_carroceria" />
+                <ScalarProperty Name="chk_parabrisaTrincado" ColumnName="chk_parabrisaTrincado" />
+                <ScalarProperty Name="chk_numeroEntregas" ColumnName="chk_numeroEntregas" />
+                <ScalarProperty Name="chk_placa3" ColumnName="chk_placa3" />
+                <ScalarProperty Name="chk_placa2" ColumnName="chk_placa2" />
+                <ScalarProperty Name="recuperado" ColumnName="recuperado" />
+                <ScalarProperty Name="id_tipo_assoalho" ColumnName="id_tipo_assoalho" />
+                <ScalarProperty Name="id_tipo_carroceria" ColumnName="id_tipo_carroceria" />
+                <ScalarProperty Name="id_tipo_veiculo" ColumnName="id_tipo_veiculo" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="tonelada" ColumnName="tonelada" />
+                <ScalarProperty Name="data_fim_checklist" ColumnName="data_fim_checklist" />
+                <ScalarProperty Name="data_checklist" ColumnName="data_checklist" />
+                <ScalarProperty Name="id_emp_transportadora" ColumnName="id_emp_transportadora" />
+                <ScalarProperty Name="cpf_condutor" ColumnName="cpf_condutor" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="id_tipo_transporte" ColumnName="id_tipo_transporte" />
+                <ScalarProperty Name="id_tipo_frete" ColumnName="id_tipo_frete" />
+                <ScalarProperty Name="id_checklist" ColumnName="id_checklist" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

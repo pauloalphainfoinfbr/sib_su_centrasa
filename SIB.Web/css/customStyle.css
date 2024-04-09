@@ -1,0 +1,36 @@
+﻿/* Personal style
+----------------------------------------------------------*/
+.tipoPlacaInput {
+    margin-top: -1px;
+    vertical-align: middle;
+    margin-right: 5px!important;
+    float: left;
+}
+
+.tipoPlacaLabel {
+   width: 150px;
+}
+
+.tipoPlacaDiv {
+    margin-left: 2%;
+}
+
+#divInputBrasil {
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+#divInputBrasil {
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+#divInputMercosul {
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+.divPossuiuPlacaBrasil {
+    margin-left: 28px;
+    margin-top: 10px;
+}

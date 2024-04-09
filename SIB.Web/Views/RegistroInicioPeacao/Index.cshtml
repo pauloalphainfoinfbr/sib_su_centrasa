@@ -1,0 +1,34 @@
+﻿@model SIB.Web.Models.Empresa.RegistroInicioPeacao
+
+@{
+    ViewBag.Title = "Registro de Saída";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@using (Html.BeginForm("Salvar", "RegistroInicioPeacao"))
+{        
+    <fieldset> 
+                     
+        <div class="hero-unit" style="text-align:center">          
+          
+            <p style="font-size:30px; font-weight:bold">            
+                Registrar Início Peação                                     
+            </p>
+
+            <p style="font-size:30px;font-weight:bold; color:red">            
+                @Model.placa                                         
+            </p>
+
+            <br />
+
+            <p style="font-size:30px;">            
+                Data / Hora Inicio Peação: <b style="color:red">@Model.dataPeacao</b>
+            </p>
+
+        </div>                                          
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Registrar</button>            
+        </div>
+    </fieldset>
+}

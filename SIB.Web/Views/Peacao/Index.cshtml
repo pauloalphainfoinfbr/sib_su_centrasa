@@ -1,0 +1,85 @@
+﻿@model SIB.Web.Models.Empresa.Peacao
+
+@{
+    ViewBag.Title = "Peação";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";    
+}
+
+<script src="@Url.Content("~/Scripts/sib.script.peacao.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Index", "Peacao", "Post"))
+{    
+    <fieldset>
+         <table class="table table-striped">
+             <thead>
+                 <tr>
+                     <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Conferência da Carga</th>
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Bom</th>
+                    <th>Ruim</th>
+                    <th>NA</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>Estado da Lona</td>
+                     <td>@Html.RadioButton("estadoLona", "4")</td>
+                     <td>@Html.RadioButton("estadoLona", "5")</td>
+                     <td>@Html.RadioButton("estadoLona", "3")</td>
+                 </tr>
+                 <tr>
+                     <td>Escoram. da Carga</td>
+                     <td>@Html.RadioButton("escoramentoCarga", "4")</td>
+                     <td>@Html.RadioButton("escoramentoCarga", "5")</td>
+                     <td>@Html.RadioButton("escoramentoCarga", "3")</td>
+                 </tr>
+                 <tr>
+                     <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Lâmina</th>                     
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th colspan="2">Não</th>                    
+                 </tr>
+                 <tr>
+                     <td>Lâmina de Borracha</td>
+                     <td>@Html.RadioButton("laminaBorracha", "1")</td>
+                     <td colspan="2">@Html.RadioButton("laminaBorracha", "2")</td>                     
+                 </tr>                 
+             </tbody>
+         </table>
+        
+        <div class="control-group">
+            <label class="label-control">Tonelagem</label>
+            <div class="controls">                
+                @if(Model.tonelada > 0)
+                {
+                    @Html.TextBox("tonelada", Model.tonelada, new { @class = "input-large", @maxlength = "5" } )                    
+                }
+                else
+                {
+                    @Html.TextBox("tonelada", "", new { @class = "input-large", @maxlength = "5" } ) 
+                }
+                
+                @Html.ValidationMessage("tonelada")
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="label-control">Nota Fiscal</label>
+            <div class="controls">
+                @Html.TextBox("listaNotaFiscal", Model.listaNotaFiscal, new {@class = "input-large"} )                
+                @Html.ValidationMessage("listaNotaFiscal")
+            </div>                                        
+        </div>
+
+        
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Próximo" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}
+

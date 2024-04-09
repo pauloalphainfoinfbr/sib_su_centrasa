@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88674E4A-248D-446E-8B72-D3B9CA445F42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIB.Data</RootNamespace>
+    <AssemblyName>SIB.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="checklist.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checklist_fase.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cidade.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="condutor.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cor_veiculo.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="empresa.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="endereco.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estado.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="marca_veiculo.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pais.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="permissao_usuario.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIBusiminasIpatinga.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIBusiminasIpatinga.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIBusiminasIpatinga.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIBusiminasIpatinga.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIBusiminasIpatinga.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="tela.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_acessorio.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_assoalho.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_carroceria.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_empresa.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_fase.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_frete.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_produto.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_qualidade_item.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_transporte.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_usuario.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_veiculo.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+    <Compile Include="veiculo.cs">
+      <DependentUpon>SIBusiminasIpatinga.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SIBusiminasIpatinga.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIBusiminasIpatinga.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="SIBusiminasIpatinga.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIBusiminasIpatinga.edmx</DependentUpon>
+      <LastGenOutput>SIBusiminasIpatinga.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SIBusiminasIpatinga.edmx.diagram">
+      <DependentUpon>SIBusiminasIpatinga.edmx</DependentUpon>
+    </None>
+    <None Include="SIBusiminasIpatinga.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIBusiminasIpatinga.edmx</DependentUpon>
+      <LastGenOutput>SIBusiminasIpatinga.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

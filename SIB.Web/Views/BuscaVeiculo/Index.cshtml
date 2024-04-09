@@ -1,0 +1,53 @@
+﻿@model SIB.Web.Models.BuscaPlaca
+
+@{
+    ViewBag.Title = "Busca Veículo";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    Html.ValidationSummary(true);
+        <fieldset>
+            <legend>Buscar Veículo</legend>
+            
+            <!--<div class="control-group">
+                <label class="control-label">Placa</label>
+                <div class="controls">
+                    <input type="text" id="placa" name="placa" aria-posinset="0" class="inputmaskPlaca setCursorPos" placeholder="Placa" autofocus="autofocus" />                    
+                    @Html.ValidationMessageFor(model => model.placa)
+                </div>
+            </div>   --> 
+            
+            <!--  -->
+
+        <label class="control-label">Busca de Placa por:</label>
+        <div class="controls">
+            <div class="tipoPlacaDiv">
+                <input class="tipoPlacaInput" type="radio" id="tipoPlacaBrasil" name="tipoPlaca" value="brasil" onclick="controleTipoPlaca()" />
+                <label class="tipoPlacaLabel">Padrão Brasil</label>
+            </div>
+            <div class="tipoPlacaDiv">
+                <input class="tipoPlacaInput" type="radio" id="tipoPlacaMercosul" name="tipoPlaca" value="mercosul" onclick="controleTipoPlaca()" />
+                <label class="tipoPlacaLabel">Padrão Mercosul</label>
+            </div>
+        </div>
+        <div class="controls">
+            <div id="divInputBrasil">
+                <input type="text" id="placa" name="placa" aria-posinset="0" class="span12 inputmaskPlacaBrasil setCursorPos" placeholder="Placa" autofocus="autofocus" />                    
+                @Html.ValidationMessageFor(model => model.placa)  
+            </div>        
+            <div id="divInputMercosul">
+                <input type="text" id="placaMercosul" name="placaMercosul" aria-posinset="0" class="span12 inputmaskPlacaMercosul setCursorPos" placeholder="Placa" autofocus="autofocus" />                    
+                @Html.ValidationMessageFor(model => model.placaMercosul)  
+            </div>        
+        </div>
+
+            <!-- -->       
+
+                    
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+        </fieldset>
+}

@@ -1,0 +1,77 @@
+﻿@model SIB.Web.Models.Empresa.ConferenciaCarga
+
+@{
+    ViewBag.Title = "Conferência da Carga";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";    
+}
+
+@using (Html.BeginForm("Index", "ConferenciaCarga","Post"))
+{    
+    <fieldset>
+         <table class="table table-striped">
+             <thead>
+                 <tr>
+                     <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Conferência da Carga</th>
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>NA</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 @*<tr>
+                     <td>Material Esta Molhado</td>
+                     <td>@Html.RadioButton("materialMolhado", "1")</td>
+                     <td>@Html.RadioButton("materialMolhado", "2")</td>
+                     <td>@Html.RadioButton("materialMolhado", "3")</td>
+                 </tr>*@
+                 <tr>
+                     <td>Cintamento de Fardos</td>
+                     <td>@Html.RadioButton("cintamentoFardos", "1")</td>
+                     <td>@Html.RadioButton("cintamentoFardos", "2")</td>
+                     <td>@Html.RadioButton("cintamentoFardos", "3")</td>
+                 </tr>
+                 <tr>
+                     <td>Chovendo</td>
+                     <td>@Html.RadioButton("chovendo", "1")</td>
+                     <td>@Html.RadioButton("chovendo", "2")</td>
+                     <td>@Html.RadioButton("chovendo", "3")</td>
+                 </tr>
+                 @*<tr>
+                    <td>Avaria no material</td>
+                     <td>@Html.RadioButton("AvariaMaterial", "1")</td>
+                     <td>@Html.RadioButton("AvariaMaterial", "2")</td>
+                     <td>@Html.RadioButton("AvariaMaterial", "3")</td>
+                 </tr>*@
+                 <tr>
+                    <td>Tampas/guarda laterais travadas</td>
+                    <td>@Html.RadioButton("tmpGuardaLatTravad", "1")</td>
+                    <td>@Html.RadioButton("tmpGuardaLatTravad", "2")</td>
+                    <td>@Html.RadioButton("tmpGuardaLatTravad", "3")</td>
+                 </tr>                 
+             </tbody>
+         </table>
+
+        <div class="control-group">
+            <label class="controls">Avaria no material</label>
+            <div class="controls">
+                @Html.DropDownListFor(model => model.AvariaMaterial, (SelectList)TempData["TpSimNaoNa"], new { @class="span12"  })
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="controls">Tipo de Avaria</label>
+            <div class="controls">
+                @Html.DropDownListFor(model => model.TipoAvariaMaterial, (SelectList)TempData["TpAvaria"], new { @class="span12"  })
+            </div>
+        </div>
+
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Proximo" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}
+

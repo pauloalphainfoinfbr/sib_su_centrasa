@@ -1,0 +1,90 @@
+﻿@model SIB.Web.Models.Empresa.VeiculoPossui
+
+@{
+    ViewBag.Title = "Veículo Possui";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@*<script type="text/javascript">
+    $(function (e) {
+        if ('@Model.entregaAlavancas' == "Sim") {
+            $("#divAlavancaDevolvida").show();
+        } else {
+            $("#divAlavancaDevolvida").hide();
+        }
+
+        if ('@Model.entregaAlavancas' == "Sim" && '@Model.alavancaDevolvida' == 2) {
+            $(".modal").modal("show");
+        }
+    })
+</script>*@
+
+@using (Html.BeginForm("Index","VeiculoPossui","Post"))
+{
+    <fieldset>
+        <legend>Tipo de Material / Entrega</legend>
+
+        @*<div class="hero-unit" style="text-align:center">
+            <p style="font-size:30px;color:red; font-weight:bold">Atenção!</p>
+            <br /><br />
+          
+            <p style="font-size:30px;color:green;">            
+            Entrega de Alavanca:  <span id="status" name="status">@Model.entregaAlavancas</span>                                                                                   
+            </p>
+
+        </div>*@
+        
+        @*<div class="control-group" id="divAlavancaDevolvida">
+            <label class="control-label">Alavanca Devolvida</label>
+            <div class="controls">
+                @Html.DropDownListFor(model => Model.alavancaDevolvida, (SelectList)ViewBag.TpAlavancaDevolvida, "Selecione ", new { @class = "span12" } )
+            </div>
+        </div>*@
+
+        <div class="control-group">
+            <label class="control-label">Tipo de Material</label>
+            <div class="controls">
+                @Html.DropDownListFor(model => Model.materiais, (MultiSelectList)ViewBag.TpMaterial, null, new { @class = "span12", multiple = "multiple", size = "4" } )
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Número da DT</label>
+            <div class="controls">
+                <input type="text" id="DT" name="DT" class="span12" value="@Model.DT" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Peso</label>
+            <div class="controls">
+                <input type="text" id="tonelagem" name="tonelagem" class="span12" value="@Model.tonelagem" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Qtde Entregas</label>
+            <div class="controls">
+                <input type="text" id="qtdeEntregas" name="qtdeEntregas" class="span12" value="@Model.qtdeEntregas" />
+            </div>
+        </div>
+        
+        <div class="form-actions">            
+            <!--<input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />-->
+            <input type="submit" name="Proximo" id="Proximo" value="Próximo" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}
+
+<div class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Atenção!</h3>
+  </div>
+  <div class="modal-body">
+    <p>@ViewBag.Msg</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Fechar</button>
+  </div>
+</div>

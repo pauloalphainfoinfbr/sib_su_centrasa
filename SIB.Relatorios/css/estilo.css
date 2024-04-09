@@ -1,0 +1,157 @@
+BODY {
+    SCROLLBAR-FACE-COLOR: #b0b0b0;
+    FONT-SIZE: 12px;
+    MARGIN: 0px;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #ffffff;
+    COLOR: #666666;
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+    SCROLLBAR-ARROW-COLOR: #ffffff;
+    SCROLLBAR-TRACK-COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+    TEXT-ALIGN: justify;
+}
+
+.cabecalho .style1 {
+    color: #FF0000;
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.style2 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.style3 {
+    color: #00984E;
+    font-weight:bold;
+    TEXT-DECORATION: none;
+}
+
+.style4 {
+    color: #00984E;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.style5 {
+    color: #000000;
+    font-weight: normal;
+    font-size: 9pt;
+}
+
+INPUT {
+    border: 0px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    border-color: #ffffff;
+    color: #000000;
+}
+
+.RADIO {
+    BORDER-RIGHT: #fff 0px solid;
+    BORDER-TOP: #fff 0px solid;
+    BORDER-LEFT: #fff 0px solid;
+    COLOR: #000;
+    BORDER-BOTTOM: #fff 0px solid;
+    BACKGROUND-COLOR: #fff;
+}
+
+.TextBox {
+    BORDER-RIGHT: #000 1px solid;
+    BORDER-TOP: #000 1px solid;
+    BORDER-LEFT: #000 1px solid;
+    COLOR: #000;
+    BORDER-BOTTOM: #000 1px solid;
+    BACKGROUND-COLOR: #FFF;
+}
+
+.Button {
+    border: 1px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    border-color: #000000;
+    color: #000000;
+}
+
+TR.Grid_linhaRel {
+    color: #000000;
+    font-family: tahoma;
+    FONT-SIZE: 11px;
+    font-weight: none;
+    line-height: normal;
+    border: 0px normal;
+}
+
+    TR.Grid_linhaRel A {
+        text-decoration: none;
+        color: #325A58;
+        font-size: 12px;
+    }
+
+        TR.Grid_linhaRel A:visited {
+            text-decoration: none;
+            color: #325A58;
+            font-size: 12px;
+        }
+
+        TR.Grid_linhaRel A:hover {
+            text-decoration: underline;
+            color: #00984E;
+            font-size: 12px;
+        }
+
+#cabecalho {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+#cD {
+    margin: 5px;
+}
+
+.grid-view {
+    padding: 0;
+    font-family: "Verdana, Arial, Helvetica, sans-serif, Trebuchet MS";
+    font-size: 0.9em;
+    width: 70%;
+    border-style: none;    
+    vertical-align:central;    
+}
+
+    .grid-view tr.header {
+        border-style: none;
+        color: white;
+        background-color: green;
+        height: 25px;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .grid-view tr.normal {
+        border-style: none none solid none;
+        border-width: 0px 0px 1px 0px;
+        border-color: #333;
+        color: black;
+        height: 25px;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #FAF8F7;
+    }
+
+    .grid-view tr.alternate {
+        color: black;
+        height: 25px;
+        vertical-align: middle;
+        text-align: center;
+        border-style: none none solid none;
+        border-width: 1px;
+        border-color: #333;
+        background-color: #FFFFFF;
+    }

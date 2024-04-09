@@ -1,0 +1,195 @@
+﻿@model SIB.Web.Models.Empresa.ConferenciaCarga2
+
+@{
+    ViewBag.Title = "Conferência da Carga";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+<script type="text/javascript">
+    $(function (e) {
+        $(":radio").change(function (e) {
+
+            var motivos = "";
+            var i = 0;
+            $("#text").remove();
+
+            $(":radio").each(function (e) {
+                var index = $(":radio").index($(this));
+                var value = $(this).val();
+
+                if (index == 1 && value == 5 && $(this).is(':checked')) {
+                    motivos += "Amarração Carreta \n";
+                    i++;
+                }
+
+                if (index == 4 && value == 5 && $(this).is(':checked')) {
+                    motivos += "Condições da Lona \n";
+                    i++;
+                }
+
+                if (index == 7 && value == 5 && $(this).is(':checked')) {
+                    motivos += "Condições das cintas \n";
+                    i++;
+                }
+
+                if (index == 10 && value == 2 && $(this).is(':checked')) {
+                    motivos += "Devidamente Pregado \n";
+                    i++;
+                }
+            });
+
+            if (i > 0)
+                $("#status").text("Não");
+            else
+                $("#status").text("Sim");
+
+            $("#pre").append("<div id=\"text\">" + motivos + "</div>");
+
+        });
+    });
+</script>
+
+@using (Html.BeginForm("Index", "ConferenciaCarga2","Post"))
+{    
+    <fieldset>
+         <table class="table table-striped">
+             <thead>
+                 <tr>
+                     <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Conferência da Carga</th>
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Lonil</th>
+                    <th>Encerado</th>
+                    <th>&nbsp;</th>
+                 </tr>                 
+                 <tr>
+                    <td>Tipo da Lona</td>
+                    <td>@Html.RadioButton("tipoLona", "1")</td>
+                    <td>@Html.RadioButton("tipoLona", "2")</td>
+                    <td>&nbsp;</td>
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Bom</th>
+                    <th>Ruim</th>
+                    <th>NA</th>
+                 </tr>
+             </thead>
+             <tbody>                 
+                 <tr>
+                    <td>Amarração da Carreta</td>
+                    <td>@Html.RadioButton("amarracaoCarreta", "4")</td>
+                    <td>@Html.RadioButton("amarracaoCarreta", "5")</td>
+                    <td>@Html.RadioButton("amarracaoCarreta", "3")</td>
+                 </tr>
+                 <tr>
+                   <td>Condições da Lona</td>
+                   <td>@Html.RadioButton("lona", "4")</td>
+                   <td>@Html.RadioButton("lona", "5")</td>
+                   <td>@Html.RadioButton("lona", "3")</td>
+                </tr>
+                 <tr>
+                    <td>Condições das Cintas</td>
+                    <td>@Html.RadioButton("cintas", "4")</td>
+                    <td>@Html.RadioButton("cintas", "5")</td>
+                    <td>@Html.RadioButton("cintas", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Condições da embalagem do material</td>
+                    <td>@Html.RadioButton("condicoesEmbalagemMaterial", "4")</td>
+                    <td>@Html.RadioButton("condicoesEmbalagemMaterial", "5")</td>
+                    <td>@Html.RadioButton("condicoesEmbalagemMaterial", "3")</td>
+                 </tr>
+                 
+
+                 <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>NA</th>
+                 </tr> 
+                 <tr>
+                    <td>Borrachas no assoalho e carga posicionadas de forma correta</td>
+                    <td>@Html.RadioButton("borrachasAssoalhoCarga", "1")</td>
+                    <td>@Html.RadioButton("borrachasAssoalhoCarga", "2")</td>
+                    <td>@Html.RadioButton("borrachasAssoalhoCarga", "3")</td>
+                 </tr>     
+                             
+                 <!--<tr>
+                    <td>Devidamente Pregado com Cunha</td>
+                    <td>@Html.RadioButton("devidamentePregado", "1")</td>
+                    <td>@Html.RadioButton("devidamentePregado", "2")</td>
+                    <td>@Html.RadioButton("devidamentePregado", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Qtde. Cunha</td>
+                    <td colspan="3"><input type="text" id="qtdeCunha" name="qtdeCunha" placeholder="Qtde. Cunha" value="atModel.qtdeCunha" class="input-sm" /></td>
+                 </tr>-->
+                 <tr>
+                     <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Questionário</th>
+                 </tr>           
+                 <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>&nbsp;</th>
+                 </tr>                 
+                 <tr>
+                     <td>Utilizou catracão em toda a amarração?</td>
+                     <td>@Html.RadioButton("catracaoAmarracao", "1")</td>
+                     <td>@Html.RadioButton("catracaoAmarracao", "2")</td>
+                     <td>&nbsp;</td>
+                 </tr>
+                 <tr>
+                     <td>Precisou movimentar tampas?</td>
+                     <td>@Html.RadioButton("precisouMovimentarTampas", "1")</td>
+                     <td>@Html.RadioButton("precisouMovimentarTampas", "2")</td>
+                     <td>&nbsp;</td>
+                 </tr>           
+                 <tr>
+                    <th>Item</th>
+                    <th>Berço Metálico</th>
+                    <th>Bobineira</th>
+                    <th>NA</th>
+                 </tr>                 
+                 <tr>
+                     <td>Utilizou berço metálico ou bobineira?</td>
+                     <td>@Html.RadioButton("bercoMetalicoBobineira", "1")</td>
+                     <td>@Html.RadioButton("bercoMetalicoBobineira", "2")</td>
+                     <td>@Html.RadioButton("bercoMetalicoBobineira", "3")</td>
+                 </tr>
+                 <tr>
+                    <th>Item</th>
+                    <th>Carga Seca</th>
+                    <th>Graneleiro</th>
+                    <th>&nbsp;</th>
+                 </tr>
+                 <tr>
+                     <td>O veículo é carga seca ou graneleiro?</td>
+                     <td>@Html.RadioButton("cargaSecaGraneleiro", "1")</td>
+                     <td>@Html.RadioButton("cargaSecaGraneleiro", "2")</td>
+                     <td>&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table>
+
+        <div class="hero-unit" style="text-align:center">
+          <p style="font-size:30px;color:red; font-weight:bold">Atenção!</p>
+            <br /><br />
+          
+          <p style="font-size:30px;color:green;">            
+            Veículo Liberado:  <span id="status" name="status">@Model.veiculoLiberado</span>                          
+          </p>
+
+            @Html.Raw("<pre id=\"pre\" style=\"font-size:12px;background-color:#eeeeee; border-color:#eeeeee\"> </pre>")          
+
+        </div>
+
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Salvar" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}
+

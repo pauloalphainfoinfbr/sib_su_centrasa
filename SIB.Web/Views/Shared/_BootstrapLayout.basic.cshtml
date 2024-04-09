@@ -1,0 +1,129 @@
+@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>@ViewBag.Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>        
+        <link href="@Styles.Url("~/jasny-bootstrap/css/jasny-bootstrap.min.css")" rel="stylesheet"/>        
+        <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>        
+        <link href="@Styles.Url("~/css/footStyle.css")" rel="stylesheet"/>  
+        <link href="@Styles.Url("~/css/customStyle.css")" rel="stylesheet"/>       
+        @RenderSection("head", required: false)
+        @Html.Partial("_html5shiv")
+        @* favicons and touch icons go here *@                
+        <script src="~/Scripts/sib.scripts.js" type="text/javascript"></script>                     
+        <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")" type="text/javascript"></script>         
+        <script src="@Url.Content("~/Scripts/jquery.mb.browser-master/jquery.mb.browser.min.js")" type="text/javascript"></script>                 
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script> 
+        <script src="@Url.Content("~/jasny-bootstrap/js/jasny-bootstrap.min.js")" type="text/javascript"></script> 
+        <script src="@Url.Content("~/Scripts/bootstrap.min.js")" type="text/javascript"></script>                      
+        <!--<script src="@Url.Content("~/Scripts/jquery.maskedinput.js")" type="text/javascript"></script>-->                      
+        <script src="@Url.Content("~/Scripts/meiomask.js")" type="text/javascript"></script>                                                             
+        <script src="@Url.Content("~/Scripts/jquery.mask.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/sibWeb.scripts.js")" type="text/javascript"></script>
+
+        <noscript>
+            <meta http-equiv="refresh" content="0; URL=http://www.enable-javascript.com/pt/">
+        </noscript>
+          
+        <script type="text/javascript">
+            
+            window.history.forward();
+            
+            $(function (e) {                
+                $("body").load(function (e) {
+                    window.history.forward();
+                });
+
+                $("page").show(function (e) {
+                    if (event.persisted) {
+                        window.history.forward();
+                    }
+                });                                                            
+            });            
+
+        </script>   
+            
+        <script type="text/javascript">
+            $(function ($) {
+
+                /*$('.inputmaskPlaca').mask('SSS-0000', { clearIfNotMatch: true, placeholder: "XXX-0000" });
+                $('.inputmaskCpf').mask('000.000.000-00', { clearIfNotMatch: true, placeholder: "000.000.000-00" });*/
+                $('.inputmaskData').mask('00/00/0000', { clearIfNotMatch: true, placeholder: "00/00/0000" });
+
+                //$(".inputmaskCpf").setMask({ mask: '999.999.999-99' });
+                //$(".inputmaskPlaca").setMask({ mask: 'zzz-9999' });
+
+                $(".inputmaskCpf").mask("000.000.000-00", { placeholder: 'Digite aqui o CPF' });
+                $(".inputmaskPlaca").mask("SSS-0A00", { placeholder: 'Digite aqui a placa' });
+                $(".inputmaskPlacaBrasil").mask("SSS-0000", { placeholder: 'Digite aqui a placa' });
+                $(".inputmaskPlacaMercosul").mask("SSS-0S00", { placeholder: 'Digite aqui a placa' });
+                $(".inputmaskNumber").mask("0000", { placeholder: '0' });
+
+                ////SET CURSOR POSITION
+                //$.fn.setCursorPosition = function (pos) {
+                //    this.each(function (index, elem) {
+                //        if (elem.setSelectionRange) {
+                //            elem.setSelectionRange(pos, pos);
+                //        } else if (elem.createTextRange) {
+                //            var range = elem.createTextRange();
+                //            range.collapse(true);
+                //            range.moveEnd('character', pos);
+                //            range.moveStart('character', pos);
+                //            range.select();
+                //        }
+                //    });
+                //    return this;
+                //};
+
+                //$(".setCursorPos").on("click", function () {
+                //    $(this).focus().setCursorPosition(0);
+                //});
+
+            });            
+
+        </script>                     
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">                   
+                    @Html.ActionLink("Log Off", "logOut", "Account", "", new { @class = "brand" })
+                </div>
+            </div>
+        </div>        
+        <div class="container">
+            @Html.Partial("_alerts")
+            @Html.Partial("_validationSummary")
+            @RenderBody()   
+            <hr>
+            <footer>
+                <!--<p>Desenvolvido por Alphainfo LTDA.</p>-->
+            </footer> 
+        </div>
+         @Scripts.Render("~/js")
+         @RenderSection("Scripts", required: false)
+
+        <div id="wrap">
+          <div class="container">
+    
+            &nbsp;
+    
+          </div> <!-- /container -->
+        </div> <!-- /wrap -->
+      
+        <div id="footer" style="text-align:center;">
+                <div class="container">                  
+                    <br />  
+                    <p class="muted credit" style="font-size:12px;">
+                        Desenvolvido por Alphainfo Tecnologia Ltda - Tel (31)3351-3543 - alphainfo.inf.br
+                    </p>
+                </div>
+        </div>    
+    </body>
+</html>
+

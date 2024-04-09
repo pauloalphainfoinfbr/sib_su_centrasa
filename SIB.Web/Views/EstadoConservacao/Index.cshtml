@@ -1,0 +1,507 @@
+﻿@model SIB.Web.Models.Empresa.EstadoConservacao
+
+@{
+    ViewBag.Title = "Estado de Conservação";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/estado_conservacao.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        if ($("#parabrisaTrincado").val() == 1) {
+            $("#trincaTolerancia").removeAttr("disabled");
+        } else {
+            $("#trincaTolerancia").attr("disabled", "disabled");
+            $("#trincaTolerancia").val("");
+        }
+
+        $("#parabrisaTrincado").change(function (e) {
+            if ($(this).val() == 1) {
+                $("#trincaTolerancia").removeAttr("disabled");                
+            } else {
+                $("#trincaTolerancia").attr("disabled", "disabled");
+                $("#trincaTolerancia").val("");
+            }
+        });
+
+        if ($("#retrovisorTrincado").val() == 1) {
+            $("#trincaRetrovisorTolerancia").removeAttr("disabled");
+        } else {
+            $("#trincaRetrovisorTolerancia").attr("disabled", "disabled");
+            $("#trincaRetrovisorTolerancia").val("");
+        }
+
+        $("#retrovisorTrincado").change(function (e) {
+            if ($(this).val() == 1) {
+                $("#trincaRetrovisorTolerancia").removeAttr("disabled");
+            } else {
+                $("#trincaRetrovisorTolerancia").attr("disabled", "disabled");
+                $("#trincaRetrovisorTolerancia").val("");
+            }
+        });
+    });
+</script>
+
+@using (Html.BeginForm("Index","EstadoConservacao","Post"))
+{        
+    <fieldset>
+        <table class="table table-striped">
+            <thead>                
+                <tr>
+                    <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Estado de Conservação</th>                    
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Bom</th>
+                    <th>Ruim</th>
+                    <th>Na</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td>Tacógrafo</td>
+                   <td>@Html.RadioButton("tacografo", "4")</td>
+                   <td>@Html.RadioButton("tacografo", "5")</td>
+                   <td>@Html.RadioButton("tacografo", "3")</td>                   
+               </tr>
+                <tr>
+                   <td>Chassi</td>
+                   <td>@Html.RadioButton("chassi", "4")</td>
+                   <td>@Html.RadioButton("chassi", "5")</td>
+                   <td>@Html.RadioButton("chassi", "3")</td>                   
+               </tr>
+                <tr>
+                   <td>Extintor</td>
+                   <td>@Html.RadioButton("extintor", "4")</td>
+                   <td>@Html.RadioButton("extintor", "5")</td>
+                   <td>@Html.RadioButton("extintor", "3")</td>                   
+               </tr>
+                <tr>
+                   <td>Triangulo/Macaco/Chave de roda</td>
+                   <td>@Html.RadioButton("triangMacaco", "4")</td>
+                   <td>@Html.RadioButton("triangMacaco", "5")</td>
+                   <td>@Html.RadioButton("triangMacaco", "3")</td>                   
+               </tr>                               
+                <tr>
+                   <td>Carroceria</td>
+                   <td>@Html.RadioButton("carroceria", "4")</td>
+                   <td>@Html.RadioButton("carroceria", "5")</td>
+                   <td>@Html.RadioButton("carroceria", "3")</td>
+               </tr>                
+                <tr>
+                   <td>Pneus e Estepes</td>
+                   <td>@Html.RadioButton("pneusEstepes", "4")</td>
+                   <td>@Html.RadioButton("pneusEstepes", "5")</td>
+                   <td>@Html.RadioButton("pneusEstepes", "3")</td>
+               </tr>
+                <tr>
+                   <td>Luz de freio</td>
+                   <td>@Html.RadioButton("luzFreio", "4")</td>
+                   <td>@Html.RadioButton("luzFreio", "5")</td>
+                   <td>@Html.RadioButton("luzFreio", "3")</td>
+               </tr>                             
+                <tr>
+                   <td>Cordas/Cintas/Catracas</td>
+                   <td>@Html.RadioButton("cordasCintasCatracas", "4")</td>
+                   <td>@Html.RadioButton("cordasCintasCatracas", "5")</td>
+                   <td>@Html.RadioButton("cordasCintasCatracas", "3")</td>
+               </tr>
+                <tr>
+                   <td>Carroceria Limpa</td>
+                   <td>@Html.RadioButton("carroceriaLimpa", "4")</td>
+                   <td>@Html.RadioButton("carroceriaLimpa", "5")</td>
+                   <td>@Html.RadioButton("carroceriaLimpa", "3")</td>
+               </tr>                                
+                <tr>
+                    <td>Estrutura das tampas de ferro/madeira</td>
+                    <td>@Html.RadioButton("estruturaTampasFerroMadeira", "4")</td>
+                    <td>@Html.RadioButton("estruturaTampasFerroMadeira", "5")</td>
+                    <td>@Html.RadioButton("estruturaTampasFerroMadeira", "3")</td>
+                 </tr>
+                <tr>
+                    <td>Estado Geral</td>
+                    <td>@Html.RadioButton("estadoGeral", "4")</td>
+                    <td>@Html.RadioButton("estadoGeral", "5")</td>
+                    <td>@Html.RadioButton("estadoGeral", "3")</td>
+                 </tr>
+                <tr>
+                    <td>Condições da Bobineira</td>
+                    <td>@Html.RadioButton("CondicoesBobineira", "4")</td>
+                    <td>@Html.RadioButton("CondicoesBobineira", "5")</td>
+                    <td>@Html.RadioButton("CondicoesBobineira", "3")</td>
+                 </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>NA</th>
+                </tr>
+                <tr>
+                    <td>Vazamento óleo</td>
+                    <td>@Html.RadioButton("vazamentoOleo", "1")</td>
+                    <td>@Html.RadioButton("vazamentoOleo", "2")</td>
+                    <td>@Html.RadioButton("vazamentoOleo", "3")</td>
+                 </tr>               
+                <tr>
+                    <td>Parafuso das rodas tem todos</td>
+                    <td>@Html.RadioButton("parafusoRodas", "1")</td>
+                    <td>@Html.RadioButton("parafusoRodas", "2")</td>
+                    <td>@Html.RadioButton("parafusoRodas", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Possui ganchos adaptados</td>
+                    <td>@Html.RadioButton("dormentesFixados", "1")</td>
+                    <td>@Html.RadioButton("dormentesFixados", "2")</td>
+                    <td>@Html.RadioButton("dormentesFixados", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Possui borrachas no assoalho</td>
+                    <td>@Html.RadioButton("possuiBorrachasAssoalho", "1")</td>
+                    <td>@Html.RadioButton("possuiBorrachasAssoalho", "2")</td>
+                    <td>@Html.RadioButton("possuiBorrachasAssoalho", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Tem laudo do gancho adaptado</td>
+                    <td>@Html.RadioButton("laudoGanchoAdaptado", "1")</td>
+                    <td>@Html.RadioButton("laudoGanchoAdaptado", "2")</td>
+                    <td>@Html.RadioButton("laudoGanchoAdaptado", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Todos os pinos</td>
+                    <td>@Html.RadioButton("todosPinos", "1")</td>
+                    <td>@Html.RadioButton("todosPinos", "2")</td>
+                    <td>@Html.RadioButton("todosPinos", "3")</td>
+                 </tr>
+                 <tr>
+                    <td>Todas as dobradiças em boas condições</td>
+                    <td>@Html.RadioButton("dobradicasBoasCondicoes", "1")</td>
+                    <td>@Html.RadioButton("dobradicasBoasCondicoes", "2")</td>
+                    <td>@Html.RadioButton("dobradicasBoasCondicoes", "3")</td>
+                 </tr>    
+                <tr>
+                   <td>Faróis e Lanternas funcionando</td>
+                   <td>@Html.RadioButton("faroisLanterna", "1")</td>
+                   <td>@Html.RadioButton("faroisLanterna", "2")</td>
+                   <td>&nbsp;</td>
+               </tr>
+                <tr>
+                   <td>Setas Funcionando</td>
+                   <td>@Html.RadioButton("setas", "1")</td>
+                   <td>@Html.RadioButton("setas", "2")</td>
+                   <td>&nbsp;</td>
+               </tr>     
+                <tr>
+                   <td>Sinal de ré (luz e sonoro) funcionando</td>
+                   <td>@Html.RadioButton("sinalSonoroRe", "1")</td>
+                   <td>@Html.RadioButton("sinalSonoroRe", "2")</td>
+                   <td>&nbsp;</td>
+               </tr>
+                <tr>
+                   <td>Dreno de Bobineira</td>
+                   <td>@Html.RadioButton("drenoBobineira", "1")</td>
+                   <td>@Html.RadioButton("drenoBobineira", "2")</td>                   
+                   <td>@Html.RadioButton("drenoBobineira", "3")</td>
+               </tr>
+                <tr>
+                   <td>Placa legível</td>
+                   <td>@Html.RadioButton("placaLegivel", "1")</td>
+                   <td>@Html.RadioButton("placaLegivel", "2")</td>                   
+                   <td>&nbsp;</td>
+               </tr>
+                <tr>
+                   <td>Gancho tipo patola</td>
+                   <td>@Html.RadioButton("ganchoPatola", "1")</td>
+                   <td>@Html.RadioButton("ganchoPatola", "2")</td>                   
+                   <td>&nbsp;</td>
+               </tr>
+                <tr>
+                   <td>Fotos das condições da bobineira</td>
+                   <td>@Html.RadioButton("fotosCondicoesBobineira", "1")</td>
+                   <td>@Html.RadioButton("fotosCondicoesBobineira", "2")</td>                   
+                   <td>&nbsp;</td>
+               </tr>
+                <tr>
+                    <td>Drenos desobstruídos</td>
+                    <td>@Html.RadioButton("drenosDesobstruidos", "1")</td>
+                    <td>@Html.RadioButton("drenosDesobstruidos", "2")</td>
+                    <td>@Html.RadioButton("drenosDesobstruidos", "3")</td>
+                </tr>
+                <tr>
+                    <td>Borracha sobre a bobineira é inteiriça</td>
+                    <td>@Html.RadioButton("borrachaBobineiraInteirica", "1")</td>
+                    <td>@Html.RadioButton("borrachaBobineiraInteirica", "2")</td>
+                    <td>@Html.RadioButton("borrachaBobineiraInteirica", "3")</td>
+                </tr>
+                <tr>
+                    <td>Borracha está fixa sobre a bobineira</td>
+                    <td>@Html.RadioButton("borrachaFixaBobineira", "1")</td>
+                    <td>@Html.RadioButton("borrachaFixaBobineira", "2")</td>
+                    <td>@Html.RadioButton("borrachaFixaBobineira", "3")</td>
+                </tr>
+                <tr>
+                    <td>Trava de seg. de tampas</td>
+                    <td>@Html.RadioButton("travaSegTampas", "1")</td>
+                    <td>@Html.RadioButton("travaSegTampas", "2")</td>
+                    <td>@Html.RadioButton("travaSegTampas", "3")</td>
+                </tr>
+                <tr>
+                   <td>Para-brisa Trincado</td>
+                   <td>
+                       <select id="parabrisaTrincado" name="parabrisaTrincado" placeholder="Parabrisa Trincado" style="width:100px;">
+                           @if (Model.parabrisaTrincado == 0){
+                               <option value="0" selected="selected">Informe</option>
+                           }
+                           else{
+                               <option value="0">Informe</option>
+                           }
+
+                           @if (Model.parabrisaTrincado == 1){
+                               <option value="1" selected="selected">Sim</option>
+                           }
+                           else{
+                               <option value="1">Sim</option>
+                           }
+
+                           @if (Model.parabrisaTrincado == 2){
+                               <option value="2" selected="selected">Não</option>
+                           }
+                           else{
+                               <option value="2">Não</option>
+                           }
+                       </select>                       
+                   </td>
+                   <td>                       
+                       Trinca com Tolerância ?
+                   </td>
+                   <td>
+                       <select id="trincaTolerancia" name="trincaTolerancia" placeholder="Trinca com Tolerância" style="width:100px;">
+                           @if(Model.trincaTolerancia == 0){
+                               <option value="0" selected="selected">Informe</option>
+                           }
+                           else{
+                               <option value="0">Informe</option>
+                           }
+
+                           @if(Model.trincaTolerancia == 1){
+                               <option value="1" selected="selected">Sim</option>
+                           }
+                           else{
+                               <option value="1">Sim</option>
+                           }
+
+                           @if(Model.trincaTolerancia == 2){
+                               <option value="2" selected="selected">Não</option>
+                           }
+                           else{
+                               <option value="2">Não</option>
+                           }
+                       </select>
+                   </td>                   
+               </tr>
+                <tr>
+                   <td>Retrovisor Trincado</td>
+                   <td>
+                       <select id="retrovisorTrincado" name="retrovisorTrincado" placeholder="Retrovisor Trincado" style="width:100px;">
+                           @if (Model.retrovisorTrincado == 0) {
+                               <option value="0" selected="selected">Informe</option>
+                           }
+                           else{
+                               <option value="0">Informe</option>
+                           }
+
+                           @if (Model.retrovisorTrincado == 1) {
+                               <option value="1" selected="selected">Sim</option>
+                           }
+                           else{
+                               <option value="1">Sim</option>
+                           }
+
+                           @if (Model.retrovisorTrincado == 2) {
+                               <option value="2" selected="selected">Não</option>
+                           }
+                           else{
+                               <option value="2">Não</option>
+                           }
+                       </select>                       
+                   </td>
+                   <td>                       
+                       Trinca com Tolerância ?
+                   </td>
+                   <td>
+                       <select id="trincaRetrovisorTolerancia" name="trincaRetrovisorTolerancia" placeholder="Trinca com Tolerância" style="width:100px;">
+                           @if (Model.trincaRetrovisorTolerancia == 0) {
+                               <option value="0" selected="selected">Informe</option>
+                           }
+                           else{
+                               <option value="0">Informe</option>
+                           }
+
+                           @if (Model.trincaRetrovisorTolerancia == 1) {
+                               <option value="1" selected="selected">Sim</option>
+                           }
+                           else{
+                               <option value="1">Sim</option>
+                           }
+
+                           @if (Model.trincaRetrovisorTolerancia == 2) {
+                               <option value="2" selected="selected">Não</option>
+                           }
+                           else{
+                               <option value="2">Não</option>
+                           }
+                       </select>
+                   </td>                   
+               </tr>                         
+                <tr>
+                    <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Med. Fumaça Negra</th>                    
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align:center;">
+                        <select id="medFumacaNegra" name="medFumacaNegra" class="input-large">
+                            @if(Model.medFumacaNegra == "-1"){
+                                <option value="-1" selected="selected">Selecione uma Opção</option>
+                            }else{
+                                <option value="-1">Selecione uma Opção</option>
+                            }
+                            @if(Model.medFumacaNegra == "20%"){
+                                <option value="20%" selected="selected">20%</option>
+                            }else{
+                                <option value="20%">20%</option>
+                            }
+
+                            @if(Model.medFumacaNegra == "40%"){
+                                <option value="40%" selected="selected">40%</option>
+                            }else{
+                                <option value="40%">40%</option>
+                            }
+
+                            @if (Model.medFumacaNegra == "60%"){
+                                <option value="60%" selected="selected">60%</option>
+                            }else{
+                                <option value="60%">60%</option>   
+                            }
+                                
+                            @if (Model.medFumacaNegra == "80%"){
+                                <option value="80%" selected="selected">80%</option>
+                            }else{
+                                <option value="80%">80%</option>   
+                            }
+                                
+                            @if(Model.medFumacaNegra == "100%"){
+                                <option value="100%" selected="selected">100%</option>
+                            }else{
+                                <option value="100%">100%</option>
+                            }
+
+                            @if(Model.medFumacaNegra == "SELADO"){
+                                <option value="SELADO" selected="selected">SELADO</option>
+                            }else{
+                                <option value="SELADO">SELADO</option>   
+                            }
+
+                            @if(Model.medFumacaNegra == "NA"){
+                                <option value="NA" selected="selected">NA</option>
+                            }else{
+                                <option value="NA">NA</option>   
+                            }
+                            
+                        </select>                       
+                    </td>                    
+                </tr>                
+                <tr>
+                    <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Tipo de Assoalho</th>                    
+                </tr>
+                <tr>
+                   <td>Assoalho</td>
+                   <td>
+                       <select id="tipoAssoalho" name="tipoAssoalho" class="input-large">
+                                
+                            @if (Model.tipoAssoalho == 0)
+                            {                            
+                                <option value="0" selected="selected">Tipo Assoalho</option>
+                            }else{
+                                <option value="0">Selecione uma Opção</option>   
+                            }
+                            @if (Model.tipoAssoalho == 1)
+                            {                            
+                                <option value="1" selected="selected" style="color:green; font-weight:bold">Ferro</option>
+                            }else{
+                                <option value="1" style="color:green; font-weight:bold">Ferro</option>   
+                            }
+
+                            @if (Model.tipoAssoalho == 2)
+                            {
+                                <option value="2" selected="selected" style="color:green; font-weight:bold">Madeira</option>
+                            }else{
+                                <option value="2" style="color:green; font-weight:bold">Madeira</option>   
+                            }                                                        
+                        </select>
+                   </td>
+                   <td>
+                       <select id="EstadoAssoalho" name="EstadoAssoalho" class="input-large">
+                                
+                            @if (Model.EstadoAssoalho == 0)
+                            {                            
+                                <option value="0" selected="selected">Estado Assoalho</option>
+                            }else{
+                                <option value="0">Selecione uma Opção</option>   
+                            }
+
+                            @if (Model.EstadoAssoalho == 4)
+                            {                            
+                                <option value="4" selected="selected" style="color:green; font-weight:bold">Bom</option>
+                            }else{
+                                <option value="4" style="color:green; font-weight:bold">Bom</option>   
+                            }
+
+                            @if (Model.EstadoAssoalho == 5)
+                            {
+                                <option value="5" selected="selected" style="color:green; font-weight:bold">Ruim</option>
+                            }else{
+                                <option value="5" style="color:green; font-weight:bold">Ruim</option>   
+                            }
+
+                            @if (Model.EstadoAssoalho == 3)
+                            {
+                                <option value="3" selected="selected" style="color:green; font-weight:bold">NA</option>
+                            }else{
+                                <option value="3" style="color:green; font-weight:bold">NA</option>   
+                            }
+                        </select>
+                   </td>
+                   <td>
+                       <select id="SituacaoAssoalho" name="SituacaoAssoalho" class="input-large">
+                                
+                            @if (Model.EstadoAssoalho == 0)
+                            {                            
+                                <option value="0" selected="selected">Situação Assoalho</option>
+                            }else{
+                                <option value="0">Situação Assoalho</option>   
+                            }
+
+                            @if (Model.SituacaoAssoalho == 1)
+                            {                            
+                                <option value="1" selected="selected" style="color:green; font-weight:bold">Limpo</option>
+                            }else{
+                                <option value="1" style="color:green; font-weight:bold">Limpo</option>   
+                            }
+
+                            @if (Model.SituacaoAssoalho == 2)
+                            {
+                                <option value="2" selected="selected" style="color:green; font-weight:bold">Sujo</option>
+                            }else{
+                                <option value="2" style="color:green; font-weight:bold">Sujo</option>   
+                            }
+
+                        </select>
+                   </td>
+               </tr>
+            </tbody>
+        </table>
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" class="btn" value="Voltar" />
+            <input type="submit" name="Proximo" id="Proximo" class="btn btn-primary" value="Próximo" />
+        </div>
+    </fieldset>    
+}

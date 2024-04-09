@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4ae855308ba4dd886526d9bff024857" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.checklist_fase" Width="1.5" PointX="0.22832790400289366" PointY="22.841902341154359" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.cidade" Width="1.5" PointX="10.337752661825043" PointY="19.699274295800958" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.condutor" Width="1.5" PointX="9.9639743687417237" PointY="10.138344873738635" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.cor_veiculo" Width="1.5" PointX="4.6576596669189909" PointY="12.814144229895502" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.empresa" Width="1.5" PointX="4.8911986783571537" PointY="8.5696353952258981" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.endereco" Width="1.5" PointX="1.1440897738300682" PointY="4.5070512017733657" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.estado" Width="1.5" PointX="0.625" PointY="1.5" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.marca_veiculo" Width="1.5" PointX="6.4204141434377124" PointY="8.72059798646746" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.pais" Width="1.5" PointX="4.0608188584730112" PointY="1.7351955034468303" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.permissao_usuario" Width="1.5" PointX="4.5487283806077805" PointY="19.363331759052041" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tela" Width="1.5" PointX="4.7783364973861424" PointY="27.523106483520525" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_acessorio" Width="1.5" PointX="7.8072415365871244" PointY="7.5525952910783678" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_assoalho" Width="1.5" PointX="9.75029513693894" PointY="24.896496754557127" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_carroceria" Width="1.5" PointX="5.7882711560410778" PointY="3.3224269912216937" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_empresa" Width="1.5" PointX="10.452860192606625" PointY="12.899786970065808" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_fase" Width="1.5" PointX="6.1693353849320367" PointY="4.926867204218575" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_frete" Width="1.5" PointX="6.3730912648016087" PointY="0.018499866136582506" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_produto" Width="1.5" PointX="5.780182613888841" PointY="31.065318762820826" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_qualidade_item" Width="1.5" PointX="9.8809203477021867" PointY="6.6491723687616977" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_transporte" Width="1.5" PointX="5.5759303185976723" PointY="10.397706021739964" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_usuario" Width="1.5" PointX="8.2593466026053513" PointY="8.5789943377389548" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.tipo_veiculo" Width="1.5" PointX="5.13840289094411" PointY="11.340331589495918" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.usuario" Width="1.5" PointX="4.8170533966352478" PointY="27.449574334290613" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.veiculo" Width="1.5" PointX="8.9142840024616028" PointY="18.964364015946334" />
+        <AssociationConnector Association="UsiminasIpatingaModel.FK__checklist__id_us__656C112C" />
+        <AssociationConnector Association="UsiminasIpatingaModel.FK__checklist__id_us__66603565" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_fas_tipo_fase" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_cidade_estado" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_empresa_cidade" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_endereco_cidade" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_cor_veiculo" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_empresa_estado" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_empresa_tipo_empresa" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_endereco_empresa" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_usuario_empresa" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_usuario_transportadora" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_marca_veiculo" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_perm_tela" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_perm_usuario" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_tipo_qualidade" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_tipo_qualidade_conferencia" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_usuario_tipo_usuario" />
+        <EntityTypeShape EntityType="UsiminasIpatingaModel.checklist" Width="1.5" PointX="13.25" PointY="3.75" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_check_fase_usuario" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_condutor" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_fase" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_tipo_assoalho" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_tipo_frete" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_tipo_transpor" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_checklist_veiculo" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_empresa_transportadora" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_tipo_carroceria_checklist" />
+        <AssociationConnector Association="UsiminasIpatingaModel.fk_tipo_veic_checklist" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

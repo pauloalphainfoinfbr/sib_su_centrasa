@@ -1,0 +1,72 @@
+﻿@model SIB.Web.Models.Empresa.TipoVeiculoEcarroceria
+
+@{
+    ViewBag.Title = "Tipo de Veículo e Carroceria";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@using (Html.BeginForm("Index","TipoVeiculoEcarroceria","Post"))
+{
+    Html.ValidationSummary(true);
+    
+    <fieldset>              
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th colspan="10" style="text-align:center; background-color:rgb(230, 230, 230)">Tipo de Veículo</th>
+                </tr>                
+            </thead>
+            <tbody>                
+                <tr>
+                    @*<td>@Html.RadioButton("tipoVeiculo", "1")</td>
+                    <td>Toco</td>*@
+                                
+                    <td>@Html.RadioButton("tipoVeiculo", "2")</td>
+                    <td>Truck</td>
+                                
+                    <td>@Html.RadioButton("tipoVeiculo", "3")</td>
+                    <td>Truck Trucado</td>
+
+                    <td>@Html.RadioButton("tipoVeiculo", "4")</td>
+                    <td>Cavalo Mecânico Trucado</td>
+
+                    <td>@Html.RadioButton("tipoVeiculo", "5")</td>
+                    <td>Cavalo Mecânico Simples</td>
+                </tr>
+                <tr>
+                    <th colspan="12" style="text-align:center; background-color:rgb(230, 230, 230)">Tipo de Carroceria / Semi-Reboque</th>
+                </tr>
+                <tr>
+                    <td>@Html.RadioButton("tipoCarroceria", "1")</td>
+                    <td>Bobineira</td>                    
+
+                    <td>@Html.RadioButton("tipoCarroceria", "3")</td>
+                    <td>Carga Seca</td>
+
+                    <td>@Html.RadioButton("tipoCarroceria", "4")</td>
+                    <td>Graneleiro</td>
+
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>                
+                <tr>
+                    <th colspan="8" style="text-align:center; background-color:rgb(230, 230, 230)">Placas</th>
+                </tr> 
+                <tr>
+                    <td colspan="8">
+                        2ª Placa &nbsp; <input type="text" id="placa2" name="placa2" aria-posinset="0" value="@Model.placa2" class="inputmaskPlaca setCursorPos" placeholder="Placa 2" />                    
+                        &nbsp; &nbsp;
+                        3ª Placa &nbsp; <input type="text" id="placa3" name="placa3" aria-posinset="0" value="@Model.placa3" class="inputmaskPlaca setCursorPos" placeholder="Placa 3" />                    
+                    </td>                                       
+                </tr>              
+            </tbody>
+        </table>                                                                                                                                                                                                                                         
+                
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Próximo" class="btn btn-primary" />
+        </div>
+
+    </fieldset>
+}
+

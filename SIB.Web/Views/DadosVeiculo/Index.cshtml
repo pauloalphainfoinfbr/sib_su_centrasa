@@ -1,0 +1,361 @@
+﻿@model SIB.Web.Models.Empresa.DadosVeiculo
+
+@{
+    ViewBag.Title = "Dados do Veículo";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+
+@if (Request.Params["expirado"] != null)
+{    
+    <script type="text/javascript">
+        alert("Vistoria expirada, favor realizar o checklist novamente.");
+    </script>
+}
+
+@if (Request.Params["reprovado"] != null)
+{    
+    <script type="text/javascript">
+        alert("Este veículo foi reprovado na última vistoria.");
+    </script>
+}
+
+@if (ViewBag.QtdeDiasParaLaudoExpirar != null)
+{
+    ViewBag.Message = "Falta(m) apenas " + @ViewBag.QtdeDiasParaLaudoExpirar + " dia(s) para o vencimento do Laudo de Opacidade de 100%, favor atualizar a data do novo Laudo.";
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myModal').modal("show", {
+                keyboard: false
+            })
+        });
+    </script>
+}
+
+@if (ViewBag.LaudoExpirado != null)
+{
+    ViewBag.Message = "O Laudo de Opacidade de 100% expirou. Hoje completa(m) " + @ViewBag.LaudoExpirado + " dia(s) que o Laudo de Opacidade de 100% do veículo foi realizado. Favor atualizar a data do novo Laudo.";
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myModal').modal("show", {
+                keyboard: false
+            })
+        });
+    </script>
+}
+
+<script src="@Url.Content("~/Scripts/sib.script.dados_veiculo.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Index", "DadosVeiculo", "Post"))
+{                                   
+        <fieldset>
+            <legend>Dados do Veículo</legend>
+
+            <div class="control-group">                
+                <label class="control-label">Transportadora</label>
+                <div class="controls">                   
+                    <select id="Transportadora" name="Transportadora" class="span12" size="4">
+                    @if ((SelectList)ViewBag.ListaEmpresa != null)
+                    {
+                        foreach (var conteudo in (SelectList)ViewBag.ListaEmpresa)
+                        {
+                            if (Convert.ToInt32(conteudo.Value) == Convert.ToInt32(ViewBag.idEmpresaSelecionada))
+                            {
+                                <option value="@conteudo.Value" selected="selected">@conteudo.Text</option>   
+                            }
+                            else
+                            {
+                                <option value="@conteudo.Value">@conteudo.Text</option>
+                            }
+                        }
+                    }                               
+                    </select>               
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Data/Hora</label>
+                <div class="controls">
+                    <input type="text" id="dataCheckList" name="dataCheckList" class="span12" readonly="true" value="@Html.DisplayFor(model => model.dataCheckList)" />                                                            
+                </div>
+            </div>
+
+            <div class="control-group">                
+                <label class="control-label">Placa do Veículo</label>
+                <div class="controls">                   
+                    <input type="text" id="placa" name="placa" value="@Html.DisplayFor(model => model.placa)" class="span12" readonly="true" />                    
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="controls">CPF do Condutor</label>
+                <div class="controls">
+                    <input type="text" id="cpfCondutor" name="cpfCondutor" placeholder="CPF" aria-posinset="0" value="@Html.DisplayFor(model => model.cpfCondutor)" class="span12 inputmaskCpf setCursorPos" />                    
+                </div>
+            </div>    
+
+            <div class="control-group">
+                <label class="control-label">Nome do Condutor</label>
+                <div class="controls">
+                    @Html.TextBox("nomeCondutor", Model.nomeCondutor, new { @class = "span12" })
+                    <!--<input type="text" id="nomeCondutor" name="nomeCondutor" placeholder="Nome Condutor" value="@Html.DisplayFor(model => model.nomeCondutor)" class="input-xlarge" />                    -->
+                    
+                </div>
+            </div>    
+            <div class="control-group">
+                <label class="control-label">Ano Veículo</label>
+                <div class="controls">
+                    <select id="ano" name="ano" class="span12">
+                        @if (Model.ano == -1)
+                        {
+                            <option value="-1" selected="selected">Selecione uma opção</option>
+                        }
+                        else
+                        {
+                            <option value="-1">Selecione uma opção</option>
+                        }
+
+                        @if (Model.ano == 0)
+                        {
+                            <option value="0" selected="selected">Anterior a 1985</option>                                
+                        }
+                        else
+                        {
+                            <option value="0">Anterior a 1985</option>
+                        }
+
+                        @if (Model.ano == 1986)
+                        {
+                            <option value="1986" selected="selected">1986 a 1990</option>    
+                        }
+                        else
+                        {
+                            <option value="1986">1986 a 1990</option>    
+                        }
+                            
+                        @if (Model.ano == 1991)
+                        {
+                            <option value="1991" selected="selected">1991 a 1995</option>    
+                        }
+                        else
+                        {
+                            <option value="1991">1991 a 1995</option>    
+                        }
+
+                        @if (Model.ano == 1996)
+                        {
+                            <option value="1996" selected="selected">1996 a 2000</option>                             
+                        }
+                        else
+                        {
+                            <option value="1986">1986 a 2000</option>    
+                        }
+
+                        @if (Model.ano == 2001)
+                        {
+                            <option value="2001" selected="selected">2001 a 2005</option>    
+                        }
+                        else
+                        {
+                            <option value="2001">2001 a 2005</option>    
+                        }
+
+                        @if (Model.ano == 2006)
+                        {
+                            <option value="2006" selected="selected">2006 a 2010</option>    
+                        }
+                        else
+                        {
+                            <option value="2006">2006 a 2010</option>    
+                        }
+                            
+                        @if (Model.ano == 2011)
+                        {
+                            <option value="2011" selected="selected">2011 a 2015</option>    
+                        }
+                        else
+                        {
+                            <option value="2011">2011 a 2015</option>       
+                        }
+
+                        @if (Model.ano == 2016)
+                        {
+                            <option value="2016" selected="selected">2016 a 2020</option>                                                        
+                        }
+                        else
+                        {
+                            <option value="2016">2016 a 2020</option>                                                        
+                        }
+                    </select>
+                                        
+                </div>
+            </div>                                                                                                             
+
+            <br />            
+
+             <!-- Veículo Dedicado -->             
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Possui Laudo de Opacidade de 100%</label>
+                <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("possuiLaudoOpacidade", 1)                            
+                        Sim
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("possuiLaudoOpacidade", 2)
+                        Não
+                    </label>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="control-group">
+                <label class="control-label">Data Realização do Laudo de Opacidade</label>
+                <div class="controls">
+                    <input type="text" placeholder="Data Laudo" id="dataRealizacaoLaudoOpacidade" name="dataRealizacaoLaudoOpacidade" class="span12 inputmaskData" value="@Model.dataRealizacaoLaudoOpacidade" />
+                </div>
+            </div>
+
+            <br />
+
+            <!-- Frota/Agregado/Particular -->
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Frota/Agregado/Particular</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("transporte", 1)                            
+                        Frota
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("transporte", 2)
+                        Agregado
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("transporte", 3)
+                        Particular
+                    </label>
+               </div>
+            </div>
+
+            <!-- -->
+
+            <br />
+
+             <!-- Transporte -->
+
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Frete</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("vinculo", 2)                            
+                        FOB
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("vinculo", 1)                            
+                        CIF
+                    </label>
+               </div>
+            </div>
+
+            <br />
+
+            <!-- -->            
+
+             <!-- Veículo Dedicado -->             
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Veiculo Dedicado</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("dedicado", 1)                            
+                        Sim
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("dedicado", 2)
+                        Não
+                    </label>
+               </div>
+            </div>
+            
+            <br />           
+
+            <!-- Carga/Descarga -->             
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Carga/Descarga/Troca de Notas</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("cargaDescarga", 1)                            
+                        Carga
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("cargaDescarga", 2)
+                        Descarga
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("cargaDescarga", 3)
+                        Troca de Notas
+                    </label>
+               </div>
+            </div>            
+
+            <!-- -->            
+
+            <br />
+
+            <!-- USINA/DEPOSITO -->
+            <div class="form-group">
+                <label class="col-xs-3 control-label">USINA/DEPÓSITO</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("usinaDeposito", 1)
+                        Usina
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("usinaDeposito", 2)
+                        Depósito
+                    </label>
+               </div>
+            </div>
+
+            <!-- -->      
+            
+            <br />
+
+            <!-- ALTURA DO VEÍCULO -->
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Arqueamento da carroceria de acordo com a legislação</label>
+               <div class="col-xs-9">
+                    <label class="checkbox inline">
+                        @Html.RadioButton("alturaVeic", 1)
+                        Sim
+                    </label>
+                    <label class="checkbox inline">
+                        @Html.RadioButton("alturaVeic", 2)
+                        Não
+                    </label>
+               </div>
+            </div>
+
+            <!-- -->                                        
+
+            <div class="form-actions">                
+                <input type="submit" name="Voltar" id="Voltar" class="btn" value="Voltar" />
+                <input type="submit" name="Proximo" id="proximo" class="btn btn-primary" value="Próximo" />
+            </div>
+        </fieldset>
+}
+
+<div id="myModal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Atenção!</h3>
+  </div>
+  <div class="modal-body">
+    <p>@ViewBag.Message</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+  </div>
+</div>

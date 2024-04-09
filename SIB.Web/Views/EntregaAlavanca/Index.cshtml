@@ -1,0 +1,25 @@
+﻿@model SIB.Web.Models.Empresa.Alavanca
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@using (Html.BeginForm("Index", "EntregaAlavanca", "Post"))
+{                                   
+        <fieldset>
+            <legend>Alavanca</legend>
+
+            <div class="control-group">                
+                <label class="control-label">Entrega de Alavanca</label>
+                <div class="controls">                   
+                    @Html.DropDownListFor(model => Model.entregaAlavanca, (SelectList)ViewBag.Alavanca, "Selecione", new { @class = "span12" })
+                </div>
+            </div>
+
+            <div class="form-actions">                
+                <input type="submit" name="Voltar" id="Voltar" class="btn btn-block" value="Voltar" />
+                <input type="submit" name="Proximo" id="proximo" class="btn btn-primary btn-block" value="Salvar" />
+            </div>
+        </fieldset>
+}

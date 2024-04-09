@@ -1,0 +1,58 @@
+﻿@model SIB.Web.Models.Empresa.RetornouUsina
+
+@{
+    ViewBag.Title = "Retornou da Usina";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";    
+}
+
+@using (Html.BeginForm("Index", "RetornouUsina","Post"))
+{           
+    <fieldset>
+        <legend>Retornou da Usina</legend>      
+                                                       
+        <div class="control-group">
+            <label class="control-label">Retornou da Usina</label>
+            <div class="controls">
+                <label class="checkbox inline">
+                    @Html.RadioButton("retornouUsina", 1) <i>Sim</i>
+                </label>
+                <label class="checkbox inline">
+                    @Html.RadioButton("retornouUsina", 2) <i>Não</i>                
+                </label>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Número do Lote</label>
+            <div class="controls">                              
+                @Html.TextAreaFor(model => model.numeroLote, new { @class="span12" })
+            </div>
+        </div>
+              
+        <div class="control-group">
+            <label class="control-label">Cliente</label>
+            <div class="controls">
+                <input type="text" id="cliente" name="cliente" value="@Model.cliente" class="span12" />
+            </div>
+        </div>
+
+        @*<div class="control-group">
+            <label class="control-label">Material</label>
+            <div class="controls">
+                @Html.DropDownListFor(model => model.material, (SelectList)TempData["TpMaterial"], new { @class="span12" })
+            </div>
+        </div>*@
+        
+        <div class="control-group">
+            <label class="control-label">Observação</label>
+            <div class="controls">                
+                <textarea id="observacao" name="observacao" cols="10" rows="5" class="span12">@Model.observacao</textarea>                                
+            </div>
+        </div>
+                                        
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Próximo" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}

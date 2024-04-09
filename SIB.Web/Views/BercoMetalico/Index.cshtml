@@ -1,0 +1,70 @@
+﻿@model SIB.Web.Models.Empresa.BercoMetalico
+
+@{
+    ViewBag.Title = "Berço Metálico";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+@using (Html.BeginForm("Index","BercoMetalico","Post"))
+{        
+    <fieldset>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th colspan="4" style="text-align:center; background-color:rgb(230, 230, 230)">Berço Metálico</th>                    
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>&nbsp;</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Necessário Montar Berço:</td>
+                    <td>@Html.RadioButton("necessarioMontarBerco", "1")</td>
+                    <td>@Html.RadioButton("necessarioMontarBerco", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>
+                <tr>
+                    <td>Possui:</td>
+                    <td>@Html.RadioButton("possui", "1")</td>
+                    <td>@Html.RadioButton("possui", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>
+                @*<tr>
+                    <td>Metalico:</td>
+                    <td>@Html.RadioButton("metalico", "1")</td>
+                    <td>@Html.RadioButton("metalico", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>*@
+                <tr>
+                    <td>Berço Próprio:</td>
+                    <td>@Html.RadioButton("bercoProprio", "1")</td>
+                    <td>@Html.RadioButton("bercoProprio", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>                
+                <tr>
+                    <td>Liberado:</td>
+                    <td>@Html.RadioButton("liberado", "1")</td>
+                    <td>@Html.RadioButton("liberado", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>                
+                <tr>
+                    <td>Bobineira:</td>
+                    <td>@Html.RadioButton("bobineira", "1")</td>
+                    <td>@Html.RadioButton("bobineira", "2")</td>   
+                    <td colspan="2"></td>                
+                </tr>                                       
+               
+            </tbody>
+        </table>
+
+        
+        <div class="form-actions">            
+            <input type="submit" name="Voltar" id="Voltar" value="Voltar" class="btn" />
+            <input type="submit" name="Proximo" id="Proximo" value="Próximo" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}

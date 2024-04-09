@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="SIB.Relatorios.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />  
+    <title>- CEB - CHECK-LIST ELETRÔNICO BRASILTEC</title>
+        
+    <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>        
+    <script type="text/javascript" src="jasny-bootstrap/js/jasny-bootstrap.min.js"></script>                  
+    <!--<script type="text/javascript" src="scripts/scriptItemSelecionadoMenu.js"></script>-->                  
+
+    <link href="css/estilo.css" type="text/css" rel="stylesheet" />
+    <link href="css/footStyle.css" type="text/css" rel="stylesheet" />
+    <link href="Content/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    
+    <link href="Content/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="Content/bootstrap/bootstrap.theme.min.css" rel="stylesheet" media="screen" />
+    <link href="jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/MasterPageStyle.css" rel="stylesheet" />    
+</head>
+<body>    
+    <div id="geral">
+        <div id="cabecalho">
+            <img src="images/topo.jpg" />
+        </div>
+        <div id="menu" class="well" style="position:absolute;">
+            <table style="border-collapse: collapse; width:200px; height:240px;" >
+                <tr>
+                    <td>
+                        <ul class="nav nav-list">
+                            <li class="nav-header"><span style="font-weight:bold;">Cadastros</span></li>
+                            <li id="lstItemCadusu">
+                                <asp:HyperLink ID="lblCadusu" CssClass="style3" runat="server" NavigateUrl="cadUsuario.aspx" Enabled="False">
+                                    Usuário
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemCadEmp">
+                                <asp:HyperLink ID="lblCadEmp" runat="server" CssClass="style3" Enabled="false" NavigateUrl="cadEmpresa.aspx">
+                                    Empresa
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemCadTra">
+                                <asp:HyperLink ID="lblCadTra" runat="server" CssClass="style3" Enabled="False" NavigateUrl="cadTransportadora.aspx">
+                                    Transportadora
+                                </asp:HyperLink>
+                            </li>                            
+                            <li class="nav-header"><span style="font-weight:bold;">Edi&ccedil;&atilde;o</span></li>
+                            <li id="lstItemEdtUsu">
+                                <asp:HyperLink ID="lblEdtUsu" runat="server" CssClass="style3" Enabled="False" NavigateUrl="edtUsuario.aspx">
+                                    Usuário
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemEdtEmp">
+                                <asp:HyperLink ID="lblEdtEmp" runat="server" CssClass="style3" Enabled="False" NavigateUrl="edtEmpresa.aspx">
+                                    Empresa
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemEdtTra">
+                                <asp:HyperLink ID="lblEdtTra" runat="server" CssClass="style3" Enabled="False" NavigateUrl="edtTransportadora.aspx">
+                                    Transportadora
+                                </asp:HyperLink>
+                            </li>
+                            <li class="nav-header"><span style="font-weight:bold;">Veículos Bloqueados</span></li>
+                            <li id="lstItemBloqueados">
+                                <asp:HyperLink ID="lblBloqueados" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/BloqueioExpirado.aspx">
+                                    Desbloqueio de Veículos
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemRelBloqueados">
+                                <asp:HyperLink ID="lblRelBloqueados" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relBloqueados.aspx">
+                                    Relatório de Veículos Bloqueados
+                                </asp:HyperLink>
+                            </li>
+                            <li class="nav-header"><span style="font-weight:bold;">Relat&oacute;rios</span></li>
+                            <li id="lstItemPesquisaVeiculos">
+                                <asp:HyperLink ID="lblPesquisaVeiculos" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/pesquisaTransportadora.aspx">
+                                    Pesquisa de Veículos
+                                </asp:HyperLink>                                
+                            </li> 
+                            <li id="lstItemRelVeicVistoriados">
+                                <asp:HyperLink ID="lblRelVeicVistoriados" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relVistoriadosECarregados.aspx">
+                                    Ve&iacute;culos Vistoriados
+                                </asp:HyperLink> 
+                            </li>
+                            <li id="lstItemRelVeicRecusados">
+                                <asp:HyperLink ID="lblRelVeicRecusados" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relVeiculosRecusados.aspx">
+                                    Ve&iacute;culos Recusados
+                                </asp:HyperLink> 
+                            </li>
+                            <li id="lstItemRelVeicRecuperados">
+                                <asp:HyperLink ID="lblRelVeicRecuperados" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relVeiculosRecuperados.aspx">
+                                    Ve&iacute;culos Recuperados
+                                </asp:HyperLink> 
+                            </li>
+                            
+                            <li id="lstItemRelacaoCheckList">
+                                <asp:HyperLink ID="lblRelRelacaoCheckList" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relCheckList.aspx">
+                                    Relação de Check-List
+                                </asp:HyperLink>
+                            </li>                           
+                            <li id="lstItemRelMaterialDanificado">
+                                <asp:HyperLink ID="lblRelMaterialDanificado" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relMaterialDanificado.aspx">
+                                    Material Danificado
+                                </asp:HyperLink>
+                            </li>       
+                            <li id="lstItemTempoPermanencia">
+                                <asp:HyperLink ID="lblTempoPermanencia" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relTempoPermanencia.aspx">
+                                    Tempo de Permanência
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemTempoPeacao">
+                                <asp:HyperLink ID="lblTempoPeacao" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relTempoPeacao.aspx">
+                                    Tempo de Peação
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemRelFumacaNegra">
+                                <asp:HyperLink ID="lblRelFumacaNegra" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relEmissaoFumacaNegra.aspx">
+                                    Medição Fumaça Negra
+                                </asp:HyperLink>
+                            </li>
+                            <li id="lstItemRelDT">
+                                <asp:HyperLink ID="lblRelDT" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relDT.aspx">
+                                    Relatório de DT
+                                </asp:HyperLink>  
+                            </li>                                                        
+                            <li id="lstItemPesoEscoado">
+                                <asp:HyperLink ID="lblPesoEscoado" runat="server" CssClass="style3" Enabled="False" NavigateUrl="~/relPesoTotalEscoado.aspx">
+                                    Peso Total Escoado
+                                </asp:HyperLink>   
+                            </li>                            
+                            <li class="nav-header"><span style="font-weight:bold;">Permissões de usuários</span></li>
+                            <li id="lstItemPerUsu">
+                                <asp:HyperLink ID="lblPerUsu" runat="server" CssClass="style3" Enabled="False" NavigateUrl="cadPerUsu.aspx">
+                                    Definir Permissões
+                                </asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="style3" NavigateUrl="logoff.aspx" Font-Size="Small">
+                                    Sair
+                                </asp:HyperLink>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            </table>                 
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder  ID="cD" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>    
+    
+        <div id="wrap">
+          <div class="container">
+    
+            &nbsp;
+    
+          </div> <!-- /container -->
+        </div> <!-- /wrap -->
+      
+        <div id="footer" style="text-align:center;">
+                <div class="container">                  
+                    <br />  
+                    <p class="muted credit" style="font-size:12px; color:#00974B;">
+                        Desenvolvido por Alphainfo Tecnologia Ltda - Tel. (31) 3351-3543 / 2564-0801 -  <a href="http://www.alphainfo.inf.br" target="_blank">www.alphainfo.inf.br</a>
+                    </p>
+                </div>
+        </div> 
+
+</body>
+</html>
+
